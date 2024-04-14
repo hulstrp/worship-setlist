@@ -138,22 +138,122 @@ return {
 		weight = 160,
 	},
 
+	["cryptostick"] = {
+		label = "Crypto Stick",
+		weight = 50,
+		stack = false,
+	},
+	
+	["phone_dongle"] = {
+		label = "Phone Dongle",
+		weight = 50,
+		stack = false,
+	},
+	
+	["powerbank"] = {
+		label = "Power Bank",
+		weight = 50,
+		stack = false,
+	},
+	
 	['phone'] = {
-		label = 'Phone',
-		weight = 190,
+		label = 'Classic Phone',
+		weight = 150,
 		stack = false,
 		consume = 0,
 		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
 			add = function(total)
-				if total > 0 then
-					pcall(function() return exports.npwd:setPhoneDisabled(false) end)
-				end
+				TriggerServerEvent('phone:itemAdd')
 			end,
-
+	
 			remove = function(total)
-				if total < 1 then
-					pcall(function() return exports.npwd:setPhoneDisabled(true) end)
-				end
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+	
+	['black_phone'] = {
+		label = 'Black Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+	
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+	
+	['yellow_phone'] = {
+		label = 'Yellow Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+	
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+	
+	['red_phone'] = {
+		label = 'Red Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+	
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+	
+	['green_phone'] = {
+		label = 'Green Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+	
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
+			end
+		}
+	},
+	
+	['white_phone'] = {
+		label = 'White Phone',
+		weight = 150,
+		stack = false,
+		consume = 0,
+		client = {
+			export = "qs-smartphone-pro.UsePhoneItem",
+			add = function(total)
+				TriggerServerEvent('phone:itemAdd')
+			end,
+	
+			remove = function(total)
+				TriggerServerEvent('phone:itemDelete')
 			end
 		}
 	},
