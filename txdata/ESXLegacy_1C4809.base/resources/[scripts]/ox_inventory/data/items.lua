@@ -304,6 +304,13 @@ return {
 		}
 	},
 
+	['bill_paper'] = {
+		label = 'Bill paper',
+		weight = 1,
+		stack = false,
+		close = false,
+	},
+
 	['clothing'] = {
 		label = 'Clothing',
 		consume = 0,
@@ -316,6 +323,15 @@ return {
 		client = {
 			image = 'card_bank.png'
 		}
+	},
+
+	['creditcard'] = {
+		label = 'creditcard',
+		weight = 1,
+		stack = false,
+		close = false,
+		consume = 0,
+		client = { export = 'qs-banking.CreateCard' }
 	},
 
 	['scrapmetal'] = {

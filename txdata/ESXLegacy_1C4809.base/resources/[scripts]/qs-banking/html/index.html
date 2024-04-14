@@ -1,0 +1,207 @@
+<link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./script.js" defer></script>
+
+<body>
+  <div class="layout"></div>
+  <div id="wrapper" class="wrapper" state="hidden">
+    <header>
+      <nav>
+        <a href="#home" class="logo">
+          <picture>
+            <img loading="lazy" width="25px" src="./img/Mini.png" alt="The logo image">
+          </picture>
+
+          <div>
+            <span class="logo-playerName" id="userName">New User</span>
+            <span>Welcome Back</span>
+          </div>
+        </a>
+
+        <button class="button" id="card__button" dsbled="false" onclick="cardBtnClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-label="Create Credit Card">
+            <path d="M9.24264 18.9964H21V20.9964H3V16.7538L12.8995 6.85431L17.1421 11.0969L9.24264 18.9964ZM14.3137 5.44009L16.435 3.31877C16.8256 2.92825 17.4587 2.92825 17.8492 3.31877L20.6777 6.14720C21.0682 6.53772 21.0682 7.17089 20.6777 7.56141L18.5563 9.68273L14.3137 5.44009Z" fill="rgba(255,255,255,1)" role="img" alt="Create Credit Card"></path>
+          </svg>
+          <div>
+            <span>Manage</span>
+            <span>Credit cards</span>
+          </div>
+        </button>
+      </nav>
+    </header>
+
+    <div id="pin">
+      <span>Please enter your pin</span>
+      <div class="pin-code">
+        <input id="pin_one" type="password" maxlength="1" autofocus style="border-radius: 100px 10px 10px 100px;">
+        <input id="pin_two" type="password" maxlength="1">
+        <input id="pin_three" type="password" maxlength="1">
+        <input id="pin_four" type="password" maxlength="1" style="border-radius: 10px 100px 100px 10px;">
+      </div>
+    </div>
+
+    <div id="input">
+      <span>Please enter your pin</span>
+      <div class="input_container">
+        <input id="input_nr" type="number" autofocus style="border-radius: 100px 100px 100px 100px;">
+      </div>
+    </div>
+
+    <main>
+      <section class="hero_section">
+        <div class="first_row">
+          <div class="top">
+            <h1 id="card_blocked" style="display: none;">Card Blocked</h1>
+            <div class="main">
+              <h2>Card Number</h2>
+              <span class="span" id="card_number">---- ---- ---- ----</span>
+              <img loading="lazy" width="75px" src="./img/sim.png" alt="SIM card image">
+            </div>
+
+            <div class="date">
+              <div>
+                <h3>Valid</h3>
+                <span id="card_valid">--/--</span>
+              </div>
+              <div>
+                <h3>Holder</h3>
+                <span id="card_holder">----- -----</span>
+              </div>
+
+              <picture>
+                <img loading="lazy" width="50px" src="./img/visa.png" alt="Visa image">
+              </picture>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <div class="bit">
+              <h2>Deposit</h2>
+              <span>Money Input</span>
+              <button type="submit" class="button" id="deposit_btn">
+                <img loading="lazy" width="25px" src="./img/deposit.png" alt="Deposit image">
+              </button>
+            </div>
+
+            <div class="bit">
+              <h2>Withdraw</h2>
+              <span>Money Input</span>
+              <button type="submit" class="button" id="withdraw_btn">
+                <img loading="lazy" width="25px" src="./img/payout.png" alt="Input image">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="second_row">
+          <div class="top">
+            <div>
+              <h2>Bank Balance</h2>
+              <span class="span" id="balance">$ 4,400,900</span>
+            </div>
+
+            <div class="nested_diloag">
+              <div class="green">
+                <div>
+                  <h3>Last Deposit</h3>
+                  <span id="last_deposit">----</span>
+                </div>
+                <svg xmlns="http://w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-label="Income">
+                  <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(105,164,35,1)"></path>
+                </svg>
+              </div>
+              <div class="red">
+                <div>
+                  <h3>Last Withdraw</h3>
+                  <span id="last_withdraw">----</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-label="Expenses">
+                  <path d="M5 11V13H19V11H5Z" fill="rgba(229,68,68,1)"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bottom bit">
+            <div>
+              <h2>Transfer</h2>
+              <span>Money Input</span>
+            </div>
+            <button type="submit" class="button" id="transfer_btn">
+              <img width="25px" src="./img/transfer.png" alt="Transfer image">
+            </button>
+          </div>
+        </div>
+
+        <div class="third_row">
+          <div>
+            <div>
+              <h2>Last Transaction</h2>
+              <span class="span" id="last_transaction">-----</span>
+            </div>
+            <ul class="nested_diloag" id="nested_diloag">
+
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="payment">
+        <div class="payment_wrapper">
+          <div class="first_card" creator="false">
+            <div class="mid_row">
+              <h1 id="management_card_blocked" style="display: none;">Card Blocked</h1>
+              <h3>Card Number</h3>
+              <span class="card_number" id="management_card_number">---- ---- ---- ----</span>
+              <img loading="lazy" width="75px" src="./img/sim.png" alt="SIM card image">
+              <div class="active_card">
+                <div class="date">
+                  <div>
+                    <h3>Valid</h3>
+                    <span id="management_card_valid">--/--</span>
+                  </div>
+                  <div>
+                    <h3>Holder</h3>
+                    <span id="management_card_holder">----- -----</span>
+                  </div>
+                  <picture>
+                    <img loading="lazy" width="50px" src="./img/visa.png" alt="Visa Image">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom_func">
+              <button aria-label="Check">
+                <img loading="lazy" src="./img/check-line.svg" alt="Check Image">
+              </button>
+
+              <button aria-label="Pause">
+                <img loading="lazy" src="./img/pause-line.svg" alt="Pause Image">
+              </button>
+
+              <button aria-label="Delete">
+                <img loading="lazy" src="./img/delete-bin-6-fill.svg" alt="Delete Image">
+              </button>
+
+              <button aria-label="Key">
+                <img loading="lazy" src="./img/key-2-line.svg" alt="Key Image">
+              </button>
+              <button id="create_new_card" aria-label="Create">
+                Create Card
+              </button>
+            </div>
+
+            <div class="bottom_navigation">
+              <button aria-label="Previous">
+                <img loading="lazy" src="./img/arrow-left-line.svg" alt="Arrow Left">
+              </button>
+
+              <button aria-label="Next">
+                <img loading="lazy" src="./img/arrow-right-line.svg" alt="Arrow Right">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
