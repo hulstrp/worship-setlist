@@ -1,0 +1,723 @@
+#tiktok-main-container,
+#tiktok-register-container,
+#tiktok-login-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     background: var(--main-background-color);
+}
+
+.tiktok-app .swiper-wrapper {
+    background: #161823;
+}
+
+.swiper-wrapper img {
+    object-fit: cover;
+}
+
+#tiktok-container {
+    width: 100%;
+    height: 90%;
+    background: var(--main-background-color);
+}
+
+#tiktok-footer-container {
+    position: absolute;
+    width: 100%;
+    height: 11%;
+    bottom: 0;
+    background: var(--main-background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#tiktok-footer-container img {
+    position: relative;
+    width: 55px;
+    cursor: pointer
+}
+
+.tiktok-forgot-ps {
+    color: gray !important
+}
+
+.tiktok-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 15px; /* Agrega espacio entre los elementos */
+    margin: 0 10px; /* Ajusta el margen horizontal para aumentar la distancia entre los elementos */
+    cursor: pointer
+}
+ 
+.tiktok-footer p {
+    margin-top: 4px; /* Agrega margen superior para separar el ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­cono del texto */
+}
+
+#tiktok-home p {
+    margin-top: 0px;
+}
+
+#tiktok-new,
+#tiktok-profile {
+    margin-top: 5px;
+}
+
+#videos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+#videos #video-comment-container {
+    position: absolute;
+    z-index: 12;
+    display: none;
+    background: var(--main-background-color);
+    width: 100%;
+    height: 75%;
+    bottom: -100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#videos #video-comment-container #video-comments {
+    width: 100%;
+    height: 68%;
+    display: flex;
+    text-align: left;
+    margin: 35px 15px;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+}
+
+#videos #video-comment-container #video-comments::-webkit-scrollbar {
+    display: none;
+}
+
+#videos #video-comment-container #video-comments .video-comment {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#video-comment-container h7 {
+    position: relative;
+    top: 15px;
+    font-weight: bold;
+    color: gray;
+}
+
+.video-comment .video-comment-content {
+    margin-top: 7px;
+    width: 75%;
+}
+
+.tiktok-video-uploaded {
+    font-weight: bold;
+}
+
+.video-comment-content a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.video-comment-content p {
+    font-size: 16px !important;
+    font-weight: 100 !important;
+    word-break: break-word;
+}
+
+#selfProfile h5 {
+    position: relative;
+    top: 38px !important;
+    font-weight: bold;
+}
+
+#video-comment .w-24 {
+    cursor: pointer;
+}
+
+#video-comment .emojionearea-editor {
+    width: 290px;
+}
+
+.video-comment .video-comment-content p {
+    font-size: 14px;
+    font-weight: 600
+}
+
+#video-comment .emojionearea {
+    height: 36px !important;
+    border-radius: 18px;
+}
+
+.video-comment-like {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer
+}
+
+#videos #video-comment-container #video-comments .video-comment img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* scroll-snap-type: y mandatory; */
+}
+
+#video-container::-webkit-scrollbar {
+    display: none
+}
+
+.tiktok-videoContent {
+    position: relative;
+    width: 100%;
+    height: 100% !important;
+}
+
+.tiktok-video {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.tiktok-loading {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tiktok-videoActions {
+    position: absolute;
+    right: 1rem;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+.tiktok-videoProfile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tiktok-videoLike,
+.tiktok-videoComment {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+}
+
+#tiktok-register-container-header {
+    position: absolute;
+    top: 58px;
+    font-size: 19px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+#tiktok-register-container i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#tiktok-register-container footer {
+    position: relative;
+    top: 90%;
+    border-top: 1px solid var(--second-border-color);
+    height: 88px;
+    line-height: 60px;
+}
+
+#tiktok-register-page2 p,
+#tiktok-register-page3 p,
+#tiktok-register-page4 p,
+#tiktok-register-page5 p,
+#tiktok-register-page6 p {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.tiktok-login-button {
+    position: relative;
+    top: 12px;
+    border-radius: 8px;
+    color: white;
+    height: 35px;
+    pointer-events: none;
+    background-color: rgba(254, 43, 84, 1) !important
+}
+
+.tiktok-container-question-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 15%;
+    display: none;
+    padding: 0 25px;
+}
+
+.tiktok-container-question-container h5 {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#tiktok-login-form a {
+    color: black; 
+}
+
+#tiktok-login-container footer {
+    position: relative;
+    top: 90%;
+    border-top: 1px solid lightgray;
+    height: 88px;
+    line-height: 60px;
+}
+
+#tiktok-forgot-password-accounts {
+    position: relative;
+    top: 35px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#tiktok-forgot-password-accounts article {
+    margin-bottom: 5px;
+}
+
+.tiktok-container-question-container p {
+    color: gray;
+    font-size: 16px;
+}
+
+.tiktok-container-question-container input {
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px;
+}
+
+#tiktok-forgot-password-screen .discord-register-screen-header {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.tiktok-container-question-container button {
+    border: none;
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    color: white;
+    pointer-events: none;
+    background-color: rgba(254, 43, 84, 0.5)
+}  
+
+#tiktok-container #profile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    transform: translateX(100%);
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+#profile-other {
+    position: absolute;
+    width: 100%;
+    transform: translateX(100%);
+    display: none;
+    align-items: center;
+    background: white;
+    flex-direction: column;
+    z-index: 2;
+}
+
+#profile-other #tiktok-follow {
+    border: none;
+    background-color: #FE2C55;
+    color: white;
+    width: 50%;
+    height: 40px;
+}
+
+#profile #tiktok-profile-picture {
+    width: 75px;
+    height: 75px;
+    margin-top: -15px;
+    border-radius: 50%;
+    background-image: url('../img/default.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#profile-other #tiktok-profile-picture {
+    width: 75px;
+    height: 75px;
+    margin-top: 70px;
+    border-radius: 50%;
+    background-image: url('../img/default.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#tiktok-profile-changePicture {
+    position: relative;
+    font-size: 20px;
+    color: aqua;
+    left: 75%;
+    top: 80%;
+}
+
+#tiktok-profile-infos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#tiktok-profile-infos p {
+    color: gray;
+    font-size: 14px;
+}
+
+#tiktok-edit {
+    background-color: rgba(254, 43, 84, 1) !important;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#tiktok-profile-name {
+    font-size: 16px;
+}
+
+.tiktok-profile-info {
+    text-align: center;
+}
+
+.tiktok-profile-info h5 {
+    position: relative;
+    top: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tiktok-profile-info p {
+    font-size: 12px;
+}
+
+#tiktok-container #profile button {
+    width: 50%;
+    height: 37px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+}
+
+#personal-videos {
+    margin-top: 15px;
+    width: 100%;
+    height: 49%;
+    display: grid;
+    padding-bottom: 19px;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: auto;
+}
+
+
+#profile-other #personal-videos {
+    height: 475px;
+}
+
+#personal-videos .personal-video  {
+    height: 205px !important;
+    border: 1px solid var(--main-background-color);
+}
+
+#personal-videos::before {
+    width: 100%;
+    background-color: #ccc;
+    height: 10px;
+}
+
+.tiktok-back {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    height: 30px;
+    cursor: pointer
+}
+
+#videos-backBtn {
+    position: absolute;
+    top: 8%;
+    z-index: 2;
+    left: 4%;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#videos-deleteBtn {
+    position: absolute;
+    top: 8%;
+    z-index: 2;
+    right: 4%;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#videos-deleteBtn .fas {
+    font-size: 30px;
+}
+
+#personal-videos::-webkit-scrollbar {
+    display: none
+}
+
+#personal-videos video {
+    cursor: pointer;
+    border: 1px solid #fff;
+    width: 139px;
+    object-fit: fill;
+}
+
+#tiktok-container #selfProfile {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-background-color);
+    z-index: 2;
+}
+
+#selfProfile-back {
+    font-size: 20px;
+}
+
+#tiktok-container #selfProfile #selfProfile-back {
+    position: relative;
+    top: 60px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#tiktok-container #selfProfile h5 {
+    text-align: center;
+    position: relative;
+    top: 35px;
+    font-size: 18px;
+    font-size: bold;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#selfProfile-changePhoto p {
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer
+}
+
+#selfProfile-changePhoto img {
+    height: 100px !important;
+    width: 100px !important;
+}
+
+#tiktok-container #selfProfile #selfProfile-changePhoto {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tiktok-container #selfProfile #selfProfile-photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+#tiktok-container #selfProfile #aboutYou {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 30px;
+    padding: 0 15px;
+}
+
+#aboutYou h7 {
+    color: gray !important;
+}
+
+#tiktok-container #selfProfile #aboutYou #aboutYou-infos {
+    width: 100%;
+    height: 30%;
+}
+
+.about-info {
+    border-bottom: 1px solid var(--dark-border-color);
+    height: 40px;
+}
+
+.about-info span {
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+ 
+#tiktok-container #selfProfile #aboutYou #aboutYou-infos .about-info {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#tiktok-container #selfProfile #aboutYou #aboutYou-infos .about-info input {
+    border: none;
+    width: 190px;
+    text-align: right;
+    color: gray;
+}
+
+#tiktok-container #selfProfile #aboutYou h7 {
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+#tiktok-container #selfProfile #aboutYou #aboutYou-save {
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgba(254, 44, 85, 1.0);
+    height: 45px;
+}
+
+#video-comment {
+    width: 100%;
+    height: 37px;
+    position: absolute;
+    top: 78%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px;
+}
+
+#video-comment input {
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.07);
+    width: 70%;
+    padding: 5px;
+}
+
+#video-comment img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#tiktok-logout-prof {
+    line-height: 40px;
+    height: 38px;
+    cursor: pointer
+}
+
+#video-comment-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#tiktok-select-video-container header {
+    height: 0;
+}
+
+#tiktok-select-video-container a {
+    position: relative;
+    bottom: 25px;
+    font-size: 18px;
+    font-weight: bold
+}
+
+#tiktok-upload-video-container header {
+    width: 96%;
+    margin: 0 auto;
+}
+
+#tiktok-upload-video-container form {
+    position: relative;
+    top: 10px;
+}
+
+#tiktok-upload-video-container form a {
+    font-weight: bold;
+}
+
+#tiktok-upload-sound,
+#tiktok-upload-caption {
+    border-bottom: 1px solid lightgray;
+    padding-left: 0px;
+    margin-bottom: 15px;
+}
+
+#tiktok-upload-sound-end-time,
+#tiktok-upload-sound-start-time {
+    position: relative;
+    bottom: 10px;
+    font-size: 13px;
+}

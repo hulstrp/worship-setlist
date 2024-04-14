@@ -1,0 +1,343 @@
+#camera-take-photo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  box-sizing: content-box;
+}
+
+#camera-take-photo-circle {
+  position: absolute;
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+  transition: all 0.6s cubic-bezier(0.3, 1, 0.5, 1);
+}
+
+#camera-take-photo.takingVideo>#camera-take-photo-circle {
+  background-color: red;
+}
+
+#camera-take-photo.recordingVideo>#camera-take-photo-circle {
+  border-radius: 4px;
+  width: 50%;
+  height: 50%;
+}
+
+#camera-rotate-camera {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+#camera-rotate-camera svg {
+  width: 50%;
+  height: 50%;
+}
+
+#camera-rotate-camera svg path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+#camera-render-container {
+  width: 100%;
+  height: 67%;
+  cursor: crosshair;
+}
+
+.camera-body {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#camera-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transition: all .5s ease-in-out;
+}
+
+.canvas-render,
+.video-render {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: none;
+}
+
+#camera-loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: blink 3s infinite;
+}
+
+#camera-loader {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+#camera-loader-container a {
+  font-size: 18px;
+  color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.camera-mode {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+  overflow: hidden;
+  cursor: ew-resize;
+  opacity: 1;
+  -webkit-mask-image: -webkit-gradient(linear,
+      left top,
+      right top,
+      color-stop(0, rgba(0, 0, 0, 0)),
+      color-stop(0.2, black),
+      color-stop(0.8, black),
+      color-stop(1, rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(linear,
+      left top,
+      right top,
+      color-stop(0, rgba(0, 0, 0, 0)),
+      color-stop(0.2, black),
+      color-stop(0.8, black),
+      color-stop(1, rgba(0, 0, 0, 0)));
+}
+
+.camera-mode ul {
+  display: block;
+}
+
+.camera-mode ul li {
+  display: block !important;
+  margin: 20px 0px 0px 0px;
+  padding: 0px 13px 0px 13px;
+  font-size: 13px;
+  line-height: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.camera-mode ul .slick-current li {
+  color: #ffcc00;
+}
+
+.camera-mode li {
+  transition: 0.25s ease-in-out all;
+  -moz-transition: 0.25s ease-in-out all;
+  -webkit-transition: 0.25s ease-in-out all;
+}
+
+.camera-focus {
+  display: block;
+  position: absolute;
+  top: calc(50% - 110px);
+  left: calc(50% - 55px);
+  width: 110px;
+  height: 110px;
+  z-index: 1;
+  border: 1px solid #ffcc00;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.camera-focus div {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.screen .display .camera-focus div.h:before,
+.screen .display .camera-focus div.h:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  background: #ffcc00;
+}
+
+.screen .display .camera-focus div.h:before {
+  top: 50%;
+  left: 0px;
+}
+
+.screen .display .camera-focus div.h:after {
+  top: 50%;
+  right: 0px;
+}
+
+.screen .display .camera-focus div.v:before,
+.screen .display .camera-focus div.v:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  background: #ffcc00;
+}
+
+.screen .display .camera-focus div.v:before {
+  top: 0px;
+  left: 50%;
+}
+
+.screen .display .camera-focus div.v:after {
+  bottom: 0px;
+  right: 50%;
+}
+
+.screen .display .camera-focus {
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+}
+
+.camera-focus.fix {
+  animation-name: focusSet;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+
+@keyframes focusSet {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#camera-flash svg {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  padding: .1rem;
+  transition: all .2s ease-in-out;
+}
+
+.camera-app .slick-track li {
+  font-size: 15px !important;
+}
+
+#camera-last-content {
+  cursor: pointer
+}
+
+#camera-helper-text {
+  background: rgba(0, 0, 0, 0.7);
+  margin: 20px;
+  padding: 8px;
+  border-radius: 3px;
+  user-select: none;
+}
+
+#camera-helper-text div {
+  margin: 2px;
+  color: white !important;
+}
+
+#camera-helper-text div .letter {
+  position: relative;
+  bottom: 1px;
+  display: inline-block;
+  width: 23px; 
+  height: 23px; 
+  background: white;
+  color: black !important;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 1px;
+}
+
+#camera-helper-text div .text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#camera-helper-text div .enter-key {
+  font-size: 25px;
+}

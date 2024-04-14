@@ -1,0 +1,251 @@
+.bank-app {
+  background: linear-gradient(rgba(190, 0, 255, 0.4), rgba(190, 0, 255, 0.4)),
+    url("https://i.redd.it/b2r25i2yvjj01.jpg");
+  background-size: cover;
+  box-shadow: 0px 10px 20px #888;
+}
+
+#bank-home-page .top-text {
+    position: relative;
+    top: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#bank-home-page .transactions {
+    font-size: 21px;
+}
+
+#bank-home-page .main .main-text {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.bank-app .top {
+  height: 35%;
+  padding-top: 40px;
+}
+
+.bank-app .top-text {
+  margin: 20px 40px;
+  padding-top: 20px;
+}
+
+.bank-app .welcome {
+  color: #d5b8ff;
+  font-size: 22px;
+  line-height: 0.7;
+}
+
+.bank-app .bank-name {
+  font-size: 32px;
+  color: #fff;
+}
+
+.bank-app .balance {
+  color: #d5b8ff;
+  line-height: 0.7;
+}
+
+.bank-app .amount {
+  font-size: 32px;
+  color: #fff;
+}
+
+.bank-app .amount .fa-dollar-sign {
+  color: #d5b8ff;
+  font-size: 28px;
+}
+
+.bank-app .amount .noughts {
+  font-size: 26px;
+}
+
+.bank-app .fa-caret-right {
+  color: #d5b8ff;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.bank-app .main {
+  background: var(--container-dark-background-color);
+  height: 65%;
+  color: #555;
+  border-radius: 30px;
+  position: relative;
+}
+
+.bank-app .plus {
+  background: #3cec97;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  border-radius: 10px;
+  top: -25px;
+  right: 35px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0px 5px 20px #3cec97;
+  cursor: pointer;
+}
+
+.bank-app .plus p {
+  color: #fff;
+}
+
+.bank-app .main-text {
+  margin: 20px 40px;
+  padding-top: 50px;
+}
+
+.bank-app .transactions {
+  color: #663399;
+  font-size: 26px;
+}
+
+.bank-app .date {
+  color: #999;
+  font-size: 18px;
+}
+
+.bank-app .fa-caret-down {
+  color: #e1e1e1;
+}
+
+.bank-app .transaction-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  margin: 20px 25px;
+  max-height: 78%;
+}
+
+.bank-app .symbol {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  background: #b589d6;
+}
+
+.transaction-item:hover {
+  background-color: var(--dark-background-color)
+}
+
+.bank-app .company {
+  font-size: 16px;
+  color: #666;
+    max-width: 250px;
+}
+
+.bank-app .type {
+  font-size: 16px;
+  color: #999;
+}
+
+.bank-app .transaction-grid .fa-dollar-sign {
+  color: #e1e1e1;
+  font-size: 14px; 
+}
+
+.invoice-information {
+  position: relative;
+  top: 4px;
+}
+
+.bank-app .transaction-grid .amount {
+  font-size: 20px;
+  color: #666;
+}
+
+.bank-app .transaction-grid .noughts {
+  font-size: 16px;
+}
+
+.bank-app .icon-bar {
+  bottom: 60px;
+  background: #f7f7f7;
+  height: 70px;
+  width: 100%;
+  border-radius: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.bank-app .icon-bar i {
+  padding: 30px;
+  color: #c1c1c1;
+  font-size: 16px;
+}
+
+.bank-app .icon-bar i.active {
+  color: #b589d6;
+}
+
+#bank-transfer-page {
+  top: 10%;
+  transform: translateY(100%);
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+#bank-transfer-page heade{
+  height: 50px;
+}
+
+#bank-transfer-page header a {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#bank-transfer-page.active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+#bank-transfer-page i {
+  right: 20px;
+  top: 23px;
+}
+
+#bank-transfer-page .justify-center a {
+  position: relative;
+  bottom: 4px;
+}
+
+#bank-transfer-contacts .swiper-slide.selected div img {
+  box-shadow: 0px 0px 0px 2px #663399;
+  transition: 0.5s;
+  scale: 1.05;
+}
+
+#bank-transfer-contacts .swiper-slide.selected span {
+  color: #663399;
+  transition: 0.5s;
+}
+
+#bank-transfer-form {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.bank-transfer-transaction,
+.bank-transfer-amount {
+  font-size: 16px !important;
+}
+
+.bank-no-contacts {
+  margin-top: 15px;
+  font-size: 15px;
+  color: gray;
+}
+
+.bank-color-text i {
+  color: var(--text-color) !important
+}

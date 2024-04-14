@@ -1,0 +1,992 @@
+:root {
+    --main-font-size: 20px;  
+}
+
+.racing-overview {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #1c1a1c
+}
+
+.racing-app-header {
+    position: absolute;
+    top: 74px;
+    width: 100%;
+    height: 50px;
+    text-indent: 25px;
+    line-height: 0;
+}
+
+.racing-app-header p {
+    color: lightgray;
+    font-size: 18px;
+    font-weight: 0;
+}
+
+.racing-app-header h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.racing-overview h2 {
+    font-size: 190px;
+    margin-left: -30px;
+    color: black;
+    opacity: 0.2;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-setup h2 {
+    font-size: 190px;
+    margin-left: -30px;
+    color: black;
+    opacity: 0.2;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-races {
+    position: absolute;
+
+    width: 100%;
+    height: 83%;
+    top: 150px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.racing-buttons {
+    position: absolute;
+    bottom: 28px;
+    width: 93%;
+    height: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #212021;
+    border-radius: 13px;
+}
+
+.racing-button {
+    position: relative;
+    float: left;
+    height: 50px;
+    width: 30%;
+    top: 20px;
+    margin-left: 1.655%;
+    margin-right: 3.2%;
+    border-radius: 5px;
+    transition: .1s linear;
+    text-align: center;
+    color: white;
+    line-height: 43px;
+    font-size: 17px;
+}
+
+#setup-race {
+    width: 35%;
+}
+
+#leaderboards-race {
+    position: absoluite;
+    top: -19px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 60px;
+    background: red;
+    transition: .2s linear;
+}
+
+#leaderboards-race a {
+    position: relative;
+    bottom: 12px;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+#create-race {
+    width: 35%;
+}
+
+#leaderboards-race:hover {
+    font-size: 27px
+}
+
+#setup-race:hover {
+    font-size: 19px
+}
+
+#create-race:hover {
+    font-size: 19px
+}
+
+.racing-race {
+    position: relative;
+    width: 93%;
+    height: 180px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: rgb(230, 230, 230);
+    transition: .1s linear;
+    z-index: 100;
+    border-radius: 13px;
+    background: url('https://i.ibb.co/L88KFR8/racing-button.webp');
+     background-size: cover;
+    cursor: pointer;
+}
+
+.racing-race:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.race-name {
+    position: absolute;
+    left: 20px;
+    top: 90px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    width: 355px;
+white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+}
+
+.race-track {
+    position: relative;
+    float: right;
+    top: 10px;
+    text-aling: left;
+    left: -15px;
+    font-size: 19px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.race-infomation {
+    position: absolute;
+    top: 140px;
+    height: 20px;
+    width: 95%;
+    left: 21px;
+}
+
+.race-infomation-tab {
+    position: relative;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    background: none;
+    margin-right: 20px;
+}
+
+.race-buttons {
+    display: none;
+    position: absolute;
+    bottom: 18px;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+
+.race-button {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    float: right;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    pointer-events: all;
+    transition: .05s linear;
+}
+
+#join-race {
+    background-color: #44bd32;
+}
+
+#quit-race {
+    background-color: #c23616;
+    margin-right: 20px;
+}
+
+#join-race:hover {
+    background-color: #4dcf39;
+}
+
+#quit-race:hover {
+    background-color: #e43c17;
+}
+
+#start-race {
+    background-color: #0590db;
+}
+
+#start-race:hover {
+    background-color: #16a2ee;
+}
+
+.racing-setup {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1c1a1c;
+    z-index: 102;
+    left: -100%;
+}
+
+.racing-setup article {
+    height: 70%;
+}
+
+.racing-setup-track {
+    position: absolute;
+    width: 100%;
+    height: 45.95px;
+    background-color: black;
+    top: 110.28px;
+}
+
+.racing-setup-tracks {
+    position: absolute;
+    width: 100%;
+    height: 45.95px;
+}
+
+#racing-setup-trackheader {
+    position: absolute;
+    left: 25px;
+    top: 150px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    width: 89%;
+    display: inline-block;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #474747;
+    text-align: left;
+    bottom: 50px;
+    left: 25px;
+    background-color: #fff;
+    outline: none;
+}
+
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+
+.dropdown .select>i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+
+.dropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+
+.dropdown:active {
+    background-color: #f8f8f8
+}
+
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    background-color: #f8f8f8
+}
+
+.dropdown.active .select>i {
+    transform: rotate(-90deg)
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    overflow: hidden;
+    display: none;
+    border-radius: 0 important;
+    max-height: 420px;
+    overflow-y: auto;
+    z-index: 9
+}
+
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+}
+
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+
+#racing-setup-lapsheader {
+    position: absolute;
+    left: 25px;
+    top: 280px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-setup-laps {
+    position: absolute;
+    width: 88%;
+    height: 45px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    top: 320px;
+    left: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid #fff;
+    color: white;
+    transition: .1s linear;
+}
+
+.racing-setup-laps:focus {
+    border-bottom: 1.5px solid rgb(255, 137, 40);
+}
+
+.racing-setup-laps:valid {
+    border-bottom: 1.5px solid rgb(55, 199, 27);
+}
+
+.racing-setup-laps::-webkit-inner-spin-button {
+    display: none;
+}
+
+#racing-setup-informationheader {
+    position: absolute;
+    left: 25px;
+    top: 395px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-setup-information-distance {
+    position: absolute;
+    left: 25px;
+    top: 440px;
+    color: white;
+    color: gray;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-setup-information-creator {
+    position: absolute;
+    left: 25px;
+    top: 480px;
+    color: gray;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-setup-information-wr {
+    position: absolute;
+    left: 25px;
+    top: 520px;
+    color: gray;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-setup-buttons { 
+    position: absolute;
+    bottom: 28px;
+    width: 93%;
+    height: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #212021;
+    border-radius: 13px;
+} 
+
+.racing-setup-button {
+    position: relative;
+    float: left;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    text-align: center;
+    line-height: 80px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: .1s linear;
+    cursor: pointer
+}
+
+#setup-race-accept i {
+    color: white !important;
+}
+
+#setup-race-accept:hover {
+    font-size: 25px;
+}
+
+#setup-race-cancel:hover {
+    font-size: 25px;
+}
+
+/* Create */
+
+#racing-create-tracknameheader {
+    position: absolute;
+    text-align: center;
+    top: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.racing-create-trackname {
+    position: absolute;
+    width: 310px;
+    height: 36.76px;
+    top: 43px;
+    left: 13.785px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    transition: .1s linear;
+}
+
+.racing-create {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    pointer-events: all;
+}
+
+.racing-create-block {
+    position: absolute;
+    width: 80%;
+    height: 140px;
+    background-color: white;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    border-radius: 10px;
+}
+
+.racing-create-buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.racing-leaderboard .racing-app-header {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    left: 30px;
+    line-height: 20px;
+}
+
+.racing-leaderboard .racing-app-header p {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-create-button {
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    line-height: 45px;
+    text-align: center;
+    font-size: 15px;
+    transition: .05s linear;
+    cursor: pointer;
+}
+
+.racing-create-button a {
+    color: black;
+}
+
+#racing-create-accept {
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#racing-create-cancel i:hover {
+    color: black !important;
+}
+
+.racing-leaderboard {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+    z-index: 102;
+    left: -100%;
+}
+
+.racing-leaderboards {
+    position: absolute;
+    width: 90%;
+    height: 72%;
+    top: 150px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+
+#racing-leaderboards-header {
+    position: absolute;
+    right: 26px;
+    top: 120px;
+    color: white;
+
+}
+
+.racing-leaderboard-item {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(230, 230, 230);
+    transition: .1s linear;
+    z-index: 100;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    cursor: pointer
+}
+
+.racing-leaderboard-item:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+.racing-leaderboard-item-name {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-leaderboard-item-info {
+    position: absolute;
+    left: 15px;
+    top: 55px;
+    color: rgb(32, 32, 32);
+    font-size: 13px;
+}
+
+.racing-leaderboard-details {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 101;
+}
+
+.racing-leaderboard-details-block {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 60%;
+    background-color: white; 
+    top: 21%;
+    border-radius: 7px;
+}
+
+.racing-leaderboard-details-block-trackname {
+    text-align: center;
+    line-height: 55px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    height: 58px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.racing-leaderboard-details-block-list {
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 55px;
+    color: gray;
+    overflow-y: scroll;
+}
+
+.racing-app .name {
+    position: relative;
+    left: 2px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-app .time {
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-app .score {
+    font-size: 18px;
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.racing-leaderboard-details-block-list::-webkit-scrollbar {
+    display: none;
+}
+
+.racing-leaderboard-details-back {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    font-size: 25px;
+    color: black;
+    transition: .1s linear;
+}
+
+.racing-leaderboard-details-back i:hover {
+    color: gray;
+}
+
+.row {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #AFAFAF;
+    font-size: 10px;
+    left: 12.866px;
+}
+
+.name {
+    position: relative;
+    display: inline-block;
+    width: 43%;
+    line-height: 45px;
+}
+
+.racing-leaderboard-details-block-list .time {
+    position: relative;
+    display: inline-block;
+    width: 42%;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+    width: 15%;
+}
+
+#leaderboard-list-header {
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 70px;
+
+}
+
+.racing-leaderboards-button {
+    position: absolute;
+    bottom: 30px;
+    width: 70%;
+    height: 45.95px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border-radius: .4.595px;
+    text-align: center;
+    line-height: 45.95px;
+    font-size: 25px;
+    color: gray;
+    transition: .2s linear;
+}
+
+.racing-leaderboards-button i:hover {
+    color: lightgray;
+    font-size: 27px
+}
+
+.no-leaderboard-message {
+    position: relative;
+    top: 45%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.no-races-message {
+    position: relative;
+    top: 35%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.race-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.race-container .container {
+    height: 100vh;
+    opacity: 1.0;
+}
+
+.race-container .ui {
+    position: absolute;
+    width: 35vh;
+    height: 20vh;
+    bottom: 23vh;
+    border-radius: 10px;
+    left: 5vh;
+}
+
+.race-container .editor {
+    display: none;
+}
+
+.race-container #editor-racename {
+    position: absolute;
+    left: 2vh;
+    top: 2vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #editor-checkpoints {
+    position: absolute;
+    left: 2vh;
+    top: 5vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #editor-keys-tiredistance {
+    position: absolute;
+    left: 2vh;
+    top: 8vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #editor-keys-add {
+    position: absolute;
+    left: 2vh;
+    top: 11vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #editor-keys-delete {
+    position: absolute;
+    left: 2vh;
+    top: 14vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #editor-keys-cancel {
+    position: absolute;
+    left: 2vh;
+    top: 17vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #editor-keys-save {
+    position: absolute;
+    left: 2vh;
+    top: 20vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+/* RACE */
+
+.race-container .race {
+    display: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.race-container #race-racename {
+    position: absolute;
+    left: 2vh;
+    top: 2vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #race-checkpoints {
+    position: absolute;
+    left: 2vh;
+    top: 5vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #race-lap {
+    position: absolute;
+    left: 2vh;
+    top: 8vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #race-time {
+    position: absolute;
+    left: 2vh;
+    top: 11vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #race-besttime {
+    position: absolute;
+    left: 2vh;
+    top: 14vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.race-container #race-totaltime {
+    position: absolute;
+    left: 2vh;
+    top: 17vh;
+    font-size: var(--main-font-size);
+    color: white;
+    text-shadow: 1px 1px 0px #000000;
+}

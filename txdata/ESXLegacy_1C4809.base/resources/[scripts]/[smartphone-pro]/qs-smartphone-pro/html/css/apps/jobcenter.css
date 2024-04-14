@@ -1,0 +1,96 @@
+.jobcenter-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 95) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(240, 240, 240, 0.85) 100%)
+}
+
+.jobcenter-header {
+    background: #ef2c3c;
+    height: 12%;
+}
+
+.jobcenter-header a {
+    position: relative;
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 19px;
+    color: white;
+    font-weight: bold;
+}
+
+#jobcenter-header-img {
+    position: absolute;
+    width: 85%;
+    max-width: 600px; /* Puedes ajustar el tamaño máximo según tus preferencias */
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden; /* Para asegurar que la imagen no se desborde del contenedor */
+}
+
+#jobcenter-header-img img {
+    width: 100%;
+    height: auto; /* Mantener la proporción de aspecto */
+    display: block; /* Asegurar que la imagen esté centrada verticalmente */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+.jobcenter-list {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 44.5%;
+    height: 470px;
+    padding-top: 19px;
+    overflow-y: scroll;
+}
+
+.jobcenter-list::-webkit-scrollbar {
+    display: none;
+}
+
+.jobcenter-class-body-job {
+    color: black;
+    background: white;
+    transition: 0.3s;
+    width: 95%;
+    text-align: left;
+    padding-left: 25px;
+    line-height: 60px;
+    margin-left: 2%;
+    margin-bottom: 4%;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.jobcenter-class-body-job:hover{
+    background: #ef2c3c;
+    color: white;
+}
+
+.jobcenter-showitems-other {
+    margin-top: 2px;
+    margin-left: 60%;
+    position: absolute;
+    display: initial;
+    visibility: hidden;
+}
+
+#jobcenter-icon-class {
+    padding-left: 15px;
+    font-size: 25px;
+    color: white;
+}
+.jobcenter-class-body-job:hover .jobcenter-showitems-other {
+    visibility: visible;
+}

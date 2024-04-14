@@ -1,0 +1,556 @@
+.phone-applications.moveOut {
+    transition: none;
+    transform: translateX(100%) scale(1) !important;
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.phone-applications.moveLeft {
+    transition: none;
+    opacity: 0 !important;
+    transform: translateX(-100%) !important;
+    pointer-events: none;
+}
+
+.wrapperApps.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.5);
+}
+
+.wrapperDots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.wrapperDots .dot {
+    width: 8px;
+    height: 8px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapperDots.active {
+    opacity: 1;
+    width: max-content;
+    height: max-content;
+}
+
+.phone-footer-applications-search {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transition: all .4s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+#phone-footer-applications-wrapper:has(.wrapperDots.active) .phone-footer-applications-search {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: none;
+}
+
+.phone-dots-container {
+    background-color: var(--phone-footer-background);
+    padding: 7px 12px;
+    margin: 0 auto;
+    width: max-content;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.wrapperDots .dot.active {
+    background-color: #fff;
+}
+
+.phone-widget-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 18rem;
+    grid-column: span 2;
+    grid-row: span 2;
+    margin: 0 auto;
+}
+
+.phone-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border-radius: 22px;
+    background-color: var(--widget-background);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 18rem;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+    text-align: left;
+}
+
+.phone-widget * {
+    color: #fff;
+}
+
+.phone-widget-name {
+    color: #fff;
+}
+
+.phone-app-container:is(:not(.phone-footer-applications)) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 12px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 6px;
+}
+
+.app-unread-alerts {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 13px;
+    padding: 6px;
+    border-radius: 15px;
+    line-height: 7px;
+    color: white;
+    background: #ff2306;
+    text-align: center;
+    min-width: 22px;
+    max-width: 56px;
+    height: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px
+}
+
+.phone-home-applications {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 100%;
+    gap: 24px;
+    height: 100%;
+}
+
+
+:is(.phone-application-wrapper, .phone-group-application-wrapper).shake {
+    animation: shake_xxx 0.2s linear alternate infinite;
+    -webkit-transform-origin: 50% 10%;
+    transform-origin: 50% 10%;
+}
+
+.phone-group-application-wrapper .remove-application {
+    left: 1.25rem;
+}
+
+.phone-footer-applications .phone-applications-app-name {
+    display: none;
+}
+
+#wrapper-apps-container {
+    height: calc(100% - 20%);
+    position: relative;
+    z-index: 1;
+}
+
+.wrapperApps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    cursor: grab;
+    margin: 0 auto;
+    gap: 16px;
+    transition: transform all 1s;
+    height: 100%;
+}
+
+.phone-applications.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.5);
+}
+
+.phone-application {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
+    gap: 4px;
+}
+
+.phone-application:hover {
+    filter: brightness(0.85);
+    -webkit-filter: brightness(0.85);
+}
+
+.phone-home-button-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    z-index: 999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+.phone-home-button {
+    width: 150px;
+    height: 5px;
+    background: var(--text-color);
+    border-radius: 4px;
+    position: absolute;
+    bottom: 1rem;
+    z-index: 999999999;
+    transition: all 0.4s, transform 0s;
+    cursor: pointer;
+}
+
+#home-button-container {
+    cursor: pointer;
+    width: 200px;
+    height: 5px;
+    background: #000;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999999;
+}
+
+.phone-applications {
+    position: relative;
+    height: calc(100% - 7%);
+    width: calc(100% - 10%);
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: scale(2);
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-applications-app-name {
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    z-index: -1;
+}
+
+#phone-footer-applications-container {
+    position: absolute;
+    bottom: 2.2rem;
+    left: -10px;
+    width: 105%;
+    padding: 0 -0px;
+    z-index: 20;
+}
+
+.phone-footer-applications {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    padding: 20px 8px;
+    border-radius: 30px;
+    background-color: var(--phone-footer-background);
+    backdrop-filter: blur(15px);
+    box-sizing: border-box;
+}
+
+.phone-footer-applications .phone-applications-icons {
+    width: 62px;
+}
+
+
+.phone-application-img {
+    aspect-ratio: 1/1;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12.5px;
+    position: relative;
+    width: 66px;
+}
+
+.remove-application {
+    display: none;
+    background-color: hsla(0, 0%, 65%, .9);
+    height: 2.5rem;
+    left: 0.25rem;
+    pointer-events: all;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 2.5rem;
+    z-index: 99999999;
+    position: absolute;
+    top: -10px;
+    font-size: 22px;
+    border-radius: 9999px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.phone-applications-icons {
+    cursor: pointer;
+    -webkit-user-drag: none;
+}
+
+#phone-widget-container {
+    display: none;
+}
+
+.phone-applications #phone-widget-container {
+    display: block;
+}
+
+#exitShake {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: end;
+    height: 2.5rem;
+    border-radius: 20px;
+    background-color: hsla(0, 0%, 65%, .75);
+    /* backdrop-filter: blur(10px); */
+    transform: scale(0);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 0.9em;
+    cursor: pointer;
+    transition: ease all 0.2s;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    z-index: 99999999999999999;
+}
+
+#exitShake.active {
+    transform: scale(1);
+    transition: ease all 0.2s;
+}
+
+#phone-device-screen:has(#exitShake.active, #lock-screen.editable) #phone-icons {
+    scale: 0;
+    opacity: 0;
+}
+
+#phone-time {
+    transition: all 0.2s ease;
+}
+
+#phone-device-screen:has(#lock-screen.editable) #phone-time {
+    scale: 0;
+    opacity: 0;
+}
+
+.phone-home-applications .phone-application-wrapper {
+    height: 100%;
+}
+
+.phone-application-wrapper:has(.phone-widget-container) {
+    width: 95%;
+}
+
+/* .phone-application-wrapper:not(.item-drag) .shake {
+    background: rgb(0 0 1 / 0.3);
+    border-radius: 12.5px;
+  } */
+
+#phone-application-navigation-left {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 2rem;
+}
+
+#phone-application-navigation-right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 2rem;
+}
+
+#phone-home-search-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+#phone-home-search-container header {
+    position: relative;
+    top: 10px;
+    font-size: 17px;
+    width: 97%;
+    margin: 0 auto;
+}
+
+#phone-home-search-list {
+    padding-top: 16px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: rgba(255, 255, 255, 0.08)
+}
+
+#phone-home-search-container footer {
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: rgba(255, 255, 255, 0.08)
+}
+
+#phone-home-search-container footer div {
+    background-color: rgba(255, 255, 255, 0.08)
+}
+
+#phone-home-search-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes shake_xxx {
+    0% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-transform: rotate(1.5deg);
+        transform: rotate(1.5deg);
+    }
+}
+
+.phone-application-group {
+    background-color: rgb(255 255 255 / 0.1);
+    height: 7rem;
+    border-radius: 12.5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4px 6px;
+    gap: 4px;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.phone-application-group .phone-application-img {
+    width: 18px;
+    border-radius: 4px;
+
+}
+
+.phone-application-group .phone-applications-app-name {
+    display: none;
+}
+
+#phone-group-applications-wrapper {
+    gap: 0px 16px;
+}
+
+.phone-group-applications {
+    padding: 0px 6px;
+    gap: 11px 0px;
+}
+
+#phone-group-applications-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#phone-group-applications-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.home-downloading-progress-bar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 85%;
+    height: 85%;
+    display: none;
+}
+
+.phone-application.downloading :is(.phone-applications-icons) {
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+.phone-application.downloading .home-downloading-progress-bar {
+    display: block;
+}
+
+.phone-application-group-item [data-app="reminder"] figure {
+    border-radius: 4px;
+}
+
+.phone-application-group-item [data-app="reminder"] figure .calendar-day {
+    font-size: 5px !important;
+}
+
+.phone-application-group-item [data-app="reminder"] figure .calendar-date {
+    font-size: 9px !important;
+}
+
+.phone-application-group-item [data-app="calendar"] figure {
+    border-radius: 0.5rem;
+}
+
+.phone-application-group-item [data-app="calendar"] .calendar-day {
+    font-size: 6px;
+}
+
+.phone-application-group-item [data-app="calendar"] .calendar-date {
+    font-size: 1rem;
+}

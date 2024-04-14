@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "InstalledApps": {
+      "garage": "garage",
+      "twitter": "twitter",
+      "instagram": "instagram"
+    },
+    "darkMode": true,
+    "first_screen_showed": true
+  },
+  "CallData": [],
+  "action": "open",
+  "PlayerJob": "unemployed",
+  "phoneColor": {
+    "phone": "rgb(57, 51, 77) 0px 0px 0.1em 0.25em, rgb(211, 205, 228) 0px 0px 0px 0.4em",
+    "buttons": "linear-gradient(90deg, #fff, #2a2a35)"
+  },
+  "notifies": [
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @clefiiiiiiitas id:1",
+      "id": 1,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "whatsapp",
+      "msg_head": "Whatsapp"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @clefiiiiiiitas",
+      "id": 2,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "instagram",
+      "msg_head": "Instagram"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @clefiiiiiiitas",
+      "id": 3,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "instagram",
+      "msg_head": "Instagram"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @clefiiiiiiitas",
+      "id": 11,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "instagram",
+      "msg_head": "Instagram"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @clefiiiiiiitas",
+      "id": 12,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "twitter",
+      "msg_head": "Twitter"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 13,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "twitter",
+      "msg_head": "Twitter"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 14,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "whatsapp",
+      "msg_head": "Whatsapp"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 15,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "whatsapp",
+      "msg_head": "Whatsapp"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 16,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "whatsapp",
+      "msg_head": "Whatsapp"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 17,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "whatsapp",
+      "msg_head": "Whatsapp"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 18,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 19,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 20,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 21,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 22,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 23,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 24,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 25,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 26,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 27,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 28,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 29,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 30,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 31,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "tinder",
+      "msg_head": "Tinder"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 32,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 33,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 34,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 35,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 36,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 37,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 38,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    },
+    {
+      "phone": "5539756244",
+      "msg_content": "You have a new message from @quasarstore",
+      "id": 39,
+      "msg_time": "2021-01-01 00:00:00",
+      "app_name": "contacts",
+      "msg_head": "Contacts"
+    }
+  ]
+}

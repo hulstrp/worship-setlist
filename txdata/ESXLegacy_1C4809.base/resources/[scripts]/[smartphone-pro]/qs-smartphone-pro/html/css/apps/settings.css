@@ -1,0 +1,935 @@
+.settings-app {
+  position: relative;
+  width: 100.5%;
+  padding-left: 8px;
+  padding-right: 10px;
+  background: var(--background-settings);
+}
+
+.settings-app-header {
+  padding-top: 7rem;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.settings-tab-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.settings-player-name {
+  font-size: 20px;
+  font-weight: 500;
+  width: 240px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.settings-app-tab-information {
+  height: 74%;
+  width: 100%;
+  overflow: auto;
+}
+
+.settings-tab {
+  background: var(--background-settings-tabs);
+  border-radius: 12px;
+  padding: 4px 12px;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.settings-tab:is(:empty) {
+  display: none;
+}
+
+.settings-tab .settings-app-tab {
+  border-bottom: 1px solid var(--border-settings);
+  position: relative;
+}
+
+.settings-tab .settings-app-tab:last-child {
+  border-bottom: none;
+}
+
+.settings-app-tab .fa-copy {
+  position: relative;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+}
+
+.settings-app-tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 1rem 0px;
+  cursor: pointer;
+}
+
+#settings-display-appearance .appearance-skeleton {
+  width: 12.5rem;
+}
+
+.settings-security-password {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.fa-times-circle:hover {
+  color: #e84118;
+}
+
+.call-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.settings-app-tab .phone-settings-image-source {
+  width: 7rem;
+  height: 7rem;
+}
+
+.settings-tab-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #1e7ee5;
+  display: flex;
+  padding: 4px;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.settings-tab-icon>img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.settings-tab-description {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.settings-tab-description a {
+  font-size: 15px
+}
+
+.nomargin {
+  position: relative;
+  margin: 0;
+}
+
+.nomargin:after {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid var(--border-color);
+  width: 80%;
+  bottom: 0;
+  right: 0;
+}
+
+.nomargin:last-child:after {
+  border-bottom: none;
+}
+
+.phone-add-contact-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  justify-content: center;
+}
+
+.phone-add-contact-image-source {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.settings-page {
+  display: none;
+  position: absolute;
+  height: 100%;
+  transform: translateX(100%);
+  width: 100%;
+  top: 0;
+  right: 2px;
+  background: var(--container-dark-background-color);
+  padding: 1rem;
+}
+
+.take-profile-photo {
+  z-index: 100;
+  font-size: 1.8rem;
+  color: black;
+  transition: 100ms all ease-in-out;
+}
+
+.take-profile-photo:hover {
+  transition: 100ms all ease-in-out;
+  color: var(--border-color);
+}
+
+.background-options {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 120px;
+}
+
+.background-container {
+  width: 100%;
+  height: 76%;
+  padding: 8px 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  justify-content: center;
+  justify-items: center;
+  place-items: center;
+  align-items: center;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.quick-background {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.quick-background img {
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.settings-page {
+  display: none;
+  position: absolute;
+  transform: translateX(100%);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: var(--container-dark-background-color);
+  overflow: auto;
+}
+
+.background-option-icon {
+  position: absolute;
+  height: 100%;
+  width: 56px;
+  text-align: center;
+  line-height: 65px;
+  font-size: 22px;
+  color: #fbc531;
+}
+
+.background-option-title {
+  position: absolute;
+  left: 56px;
+  top: 14px;
+  text-align: center;
+  font-size: 10px;
+  color: #030303;
+  font-size: 12px;
+
+}
+
+.background-option-description {
+  position: absolute;
+  left: 56px;
+  top: 34px;
+  text-align: center;
+  font-size: 10px;
+  color: #030303b9;
+  font-size: 1.10px;
+
+}
+
+.background-option-current {
+  position: absolute;
+  right: 28px;
+  top: 23px;
+  text-align: center;
+  font-size: 15px;
+  color: #030303b9;
+
+}
+
+.background-buttons {
+  position: absolute;
+  bottom: 0;
+  height: 46px;
+  width: 100%;
+}
+
+.background-button {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: 44px;
+  color: black;
+  font-size: 14px;
+  transition: 0.05s;
+  border-top: 2px solid #e8421800;
+}
+
+.background-button:hover {
+  background-color: #dadbdb;
+  border-top: 2px solid #e84118;
+}
+
+.background-custom {
+  display: none;
+  background: var(--container-dark-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  width: 80%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 99999999;
+}
+
+.background-custom-title {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px 0px 8px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.background-custom-input-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translate(calc(-50% - 12px), 0px);
+  margin: 12px;
+  height: 40px;
+}
+
+.custom-background-input {
+  width: 100%;
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--dark-border-color);
+  outline: none;
+  height: 35px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.custom-background-input::placeholder {
+  text-align: center;
+}
+
+.background-custom-buttons {
+  width: 100%;
+  height: 42px;
+  cursor: pointer
+}
+
+.custom-background-button {
+  position: relative;
+  float: left;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 17px;
+  border-top: 1px solid var(--border-light-color);
+  color: #087fff;
+  align-items: center;
+  justify-content: center;
+  transition: 100ms all ease-in-out;
+}
+
+#cancel-custom-background a {
+  color: var(--blue-text)
+}
+
+#cancel-custom-background {
+  border-right: 1px solid var(--border-light-color);
+}
+
+.custom-background-button:hover {
+  transition: 100ms all ease-in-out;
+  background-color: var(--border-color);
+}
+
+.phone-settings-image-source {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.profilepicture-options {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 120px;
+}
+
+.profilepicture-option-icon {
+  position: absolute;
+  height: 100%;
+  width: 56px;
+  text-align: center;
+  line-height: 65px;
+  font-size: 22px;
+  color: #fbc531;
+}
+
+.profilepicture-option-title {
+  position: absolute;
+  left: 56px;
+  top: 14px;
+  text-align: center;
+  font-size: 10px;
+  color: #030303;
+  font-size: 12px;
+}
+
+.profilepicture-option-description {
+  position: absolute;
+  left: 56px;
+  top: 34px;
+  text-align: center;
+  font-size: 10px;
+  color: #030303b9;
+  font-size: 1.10px;
+
+}
+
+.profilepicture-option-current {
+  position: absolute;
+  right: 28px;
+  top: 23px;
+  text-align: center;
+  font-size: 15px;
+  color: #030303b9;
+
+}
+
+.profilepicture-buttons {
+  position: absolute;
+  bottom: 0;
+  height: 46px;
+  width: 100%;
+}
+
+.profilepicture-button {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: 44px;
+  color: black;
+  font-size: 14px;
+  transition: 0.05s;
+  border-top: 2px solid #e8421800;
+}
+
+.profilepicture-button:hover {
+  background-color: #dadbdb;
+  border-top: 2px solid #e84118;
+}
+
+.profilepicture-custom {
+  display: none;
+  background: var(--container-dark-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  width: 80%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 99999999;
+}
+
+.profilepicture-custom-title {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px 0px 8px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.profilepicture-custom-input-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translate(calc(-50% - 12px), 0px);
+  margin: 12px;
+  height: 40px;
+}
+
+.custom-profilepicture-input {
+  width: 100%;
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--dark-border-color);
+  outline: none;
+  height: 35px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.custom-profilepicture-input::placeholder {
+  text-align: center;
+}
+
+.profilepicture-custom-buttons {
+  width: 100%;
+  height: 42px;
+  cursor: pointer
+}
+
+.custom-profilepicture-button a {
+  position: absolute;
+  top: 15px;
+}
+
+.custom-profilepicture-button {
+  position: relative;
+  float: left;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  font-size: 17px;
+  border-top: 1px solid var(--border-light-color);
+  color: #087fff;
+  align-items: center;
+  justify-content: center;
+  transition: 100ms all ease-in-out;
+}
+
+.custom-profilepicture-button:hover {
+  transition: 100ms all ease-in-out;
+  background-color: var(--border-color);
+}
+
+#cancel-custom-profilepicture a {
+  color: var(--blue-text) !important
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.settings-tab-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  width: 230px;
+  margin-left: 5px;
+}
+
+.settings-app-tab .fa-chevron-right {
+  padding-right: 10px;
+  font-size: 16px;
+}
+
+.settings-app-tab .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark-background-color);
+  transition: 0.4s;
+}
+
+.settings-app-tab .slider:before {
+  position: absolute;
+  content: '';
+  height: 25px;
+  width: 25px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #4bd663;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #4bd663;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  margin-bottom: 2px;
+  margin-left: 2px;
+  border-radius: 50%;
+}
+
+.ark {
+  width: 90px;
+  height: 200px;
+  background-size: cover;
+  margin-left: 8px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 3px;
+  margin-top: 10px;
+}
+
+.settings-details-tab::-webkit-scrollbar {
+  display: none;
+}
+
+.settings-page {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.settings-display-tab .settings-tab {
+  width: 98%;
+  margin-top: 10px;
+  left: 5px;
+}
+
+.password-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #141414;
+  position: relative;
+}
+
+.password-button {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--keyboard-key) !important;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: rgba(17, 17, 26, 0.2) 0px 1px 0px;
+}
+
+.password-delete-icon {
+  padding: 10 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: var(--keyboard-delete) !important;
+  display: flex !important;
+  cursor: pointer;
+  color: var(--text-color);
+  box-shadow: rgba(17, 17, 26, 0.2) 0px 1px 0px;
+}
+
+.password-button-container {
+  height: 36%;
+  bottom: 0px;
+  padding: 29px 11px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 9px;
+  position: absolute;
+}
+
+.password-button:last-of-type {
+  grid-column: 2 / 2;
+}
+
+.password-circle {
+  border: 1px solid var(--main-background-color-inver);
+}
+
+.password-circle.entered {
+  background: var(--main-background-color-inver);
+}
+
+.custom-profilename-input {
+  height: 45px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--dark-background-color);
+  outline: none;
+}
+
+.settings-profilepicture-tab {
+  overflow: hidden;
+}
+
+.settings-app .global-app-header {
+  font-size: 18px;
+  left: 2px;
+  width: 100%;
+}
+
+#save-profilepicture {
+  position: relative;
+  cursor: pointer;
+  left: -35px;
+  width: 75px;
+  text-align: right;
+}
+
+#cancel-settings-submenu {
+  cursor: pointer
+}
+
+.settings-profilepicture-tab .settings-player-name {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.settings-profilepicture-tab .overflow-y {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.settings-profilepicture-tab .overflow-y a {
+  position: relative;
+  right: 9px;
+}
+
+.settings-background-tab .settings-app-tab {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#settings-app-notifications-container {
+  position: relative;
+  height: 58%;
+  width: 99%;
+  left: 6px;
+  padding-bottom: 30px;
+}
+
+#settings-app-notifications-container img {
+  border-radius: 5px;
+}
+
+.notification-option {
+  height: 55px;
+  border-bottom: 1px solid var(--border-settings)
+}
+
+#enter-new-password header {
+  margin-bottom: 50px;
+}
+
+.password-circle-container {
+  margin-top: 5px;
+}
+
+#reset-password {
+  position: relative;
+  left: 10px;
+  padding-top: 5px;
+}
+
+#settings-app-notifications-type .notification-type-image {
+  width: 12rem;
+  height: 15rem;
+  object-fit: contain;
+}
+
+#settings-app-notifications-type .notification-type-container:has(.notification-type-tick:checked) .notification-type-image {
+  filter: invert(54%) sepia(69%) saturate(1940%) hue-rotate(177deg) brightness(93%) contrast(83%);
+
+}
+
+.notification-type-tick {
+  display: none;
+}
+
+.notification-type-tick+label {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.notification-type-tick+label span {
+  display: inline-block;
+  padding: 0.3rem 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 28px;
+}
+
+.notification-type-tick:checked+label span {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.notification-type-tick:checked+label span img {
+  opacity: 1;
+}
+
+#settings-background-container {
+  padding: 2rem;
+    border-radius: 15px;
+  background-color: var(--background-settings-tabs) !important;
+}
+
+.background-swiper {
+  padding-bottom: 1.5rem !important;
+}
+
+#background-list {
+  height: 36rem !important;
+}
+
+#background-list .swiper-slide figure {
+  position: relative;
+  width: 16rem;
+  height: 34rem;
+}
+
+
+#background-list img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+border-radius: 20px
+}
+
+#background-list .swiper-slide figure .lock-screen-top .date {
+  font-size: 1rem;
+}
+
+#background-list .swiper-slide figure .lock-screen-top .time {
+  font-size: 5rem;
+}
+
+#background-tab-info {
+    border-radius: 15px;
+}
+
+#background-tab-info header {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+#background-tab-info p {
+    font-size: 16px;
+}
+
+.background-figure-applications div {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#background-list .swiper-slide .lock-screen-top {
+  padding-top: 0rem;
+}
+
+#background-list .swiper-slide .time {
+  width: auto;
+}
+
+#background-swiper-header {
+  text-align: center;
+  padding: 1rem 0rem;
+  color: #777;
+  transition: all .4s;
+  margin-bottom: 1rem;
+}
+
+#background-swiper-header.change-background {
+    position: relative;
+    bottom: 9px;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--dark-background-color);
+  border-radius: 12px;
+  color: #087fff;
+  width: fit-content;
+  margin: 1rem auto;
+  cursor: pointer;
+
+}
+
+.background-swiper .swiper-pagination-bullet {
+  background-color: var(--text-color) !important;
+}
+
+#background-swiper-footer {
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+    color: white;
+    cursor: pointer;
+  background-color: #087fff;
+}

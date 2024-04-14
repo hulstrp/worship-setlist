@@ -1,0 +1,700 @@
+{
+    "action": "LoadPhoneData",
+    "PhoneData": {
+        "MetaData": {
+            "first_screen_showed": true,
+            "faceid": true,
+            "lockscreen": "no",
+            "lockScreenCustomization": {
+                "widgets": [
+                    {
+                        "name": "battery"
+                    }
+                ],
+                "dateWidget": "#date-widget-weather",
+                "timeColor": "rgb(255 255 255)",
+                "timeFont": "font-inter"
+            },
+            "InstalledApps": {
+                "garage": "garage",
+                "instagram": "instagram",
+                "twitter": "twitter"
+            },
+            "darkMode": true,
+            "profilepicture": "default"
+        },
+        "SelfTweets": [],
+        "PlayerData": {
+            "loadout": [],
+            "maxWeight": 24,
+            "charinfo": {
+                "firstname": "Quasar",
+                "lastname": "Store"
+            },
+            "ped": 3074,
+            "money": 0,
+            "accounts": [
+                {
+                    "round": true,
+                    "index": 1,
+                    "label": "Black Money",
+                    "money": 0,
+                    "name": "black_money"
+                },
+                {
+                    "round": true,
+                    "index": 2,
+                    "label": "Bank",
+                    "money": 108392,
+                    "name": "bank"
+                },
+                {
+                    "round": true,
+                    "index": 3,
+                    "label": "Money",
+                    "money": 0,
+                    "name": "money"
+                }
+            ],
+            "sex": "m",
+            "identifier": "0:246a9bdb081228f5ff60af41b6b471bf1d382dd3",
+            "job": {
+                "grade_salary": 200,
+                "grade_name": "unemployed",
+                "name": "unemployed",
+                "skin_male": [],
+                "grade_label": "Unemployed",
+                "label": "Unemployed",
+                "skin_female": [],
+                "grade": 0
+            },
+            "coords": {
+                "y": -261.4,
+                "x": -2365.5,
+                "z": 14.3,
+                "heading": 0
+            },
+            "dead": false
+        },
+        "MentionedTweets": [],
+        "Chats": [],
+        "CryptoTransactions": [],
+        "Mails": [],
+        "Tweets": [],
+        "RecentCalls": [],
+        "Ringtone": "https://www.youtube.com/watch?v=HRtC2sDiKqM",
+        "Photos": [
+            {
+                "content": "https://www.petdarling.com/wp-content/uploads/2021/01/cachorros.jpg",
+                "id": 1,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://i.pinimg.com/474x/f9/cd/f9/f9cdf9807c6e607bf3a2c171825cb85a.jpg",
+                "id": 2,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://i.pinimg.com/564x/09/47/c1/0947c19a435f2c94db9a654d01f5679a.jpg",
+                "id": 3,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/120/150",
+                "id": 4,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/150/150",
+                "id": 5,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/300/150",
+                "id": 6,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/200/150",
+                "id": 7,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/600/150",
+                "id": 8,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/750/150",
+                "id": 9,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/350/150",
+                "id": 10,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/100/150",
+                "id": 11,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/400/150",
+                "id": 12,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/200/150",
+                "id": 13,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            },
+            {
+                "content": "https://random.imagecdn.app/300/150",
+                "id": 14,
+                "data": {
+                    "albums": [
+                        "camera"
+                    ],
+                    "location": "Los Santos"
+                },
+                "created_at": "2021-09-01T20:00:00.000Z",
+                "type": "image"
+            }
+        ],
+        "Sounds": true,
+        "Contacts": [
+            {
+                "pp": "./default.png",
+                "name": "",
+                "iban": "0",
+                "identifier": "5532460102",
+                "number": "5532460102",
+                "id": 89,
+                "status": true
+            },
+            {
+                "identifier": "5532460102",
+                "number": "police",
+                "name": "Police",
+                "id": "police"
+            },
+            {
+                "identifier": "5532460102",
+                "number": "ambulance",
+                "name": "Ambulance",
+                "id": "ambulance"
+            },
+            {
+                "identifier": "5532460102",
+                "number": "mechanic",
+                "name": "Mechanic",
+                "id": "mechanic"
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Ricardo Milos",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Pedro Picapiedras",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Amanda Huginkiss",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Mike Oxlong",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Mike Hunt",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Mike Litoris",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Mike Rotch",
+                "id": 3,
+                "favorite": 1
+            },
+            {
+                "identifier": "5532460102",
+                "number": "1236564",
+                "name": "Mike Hawk",
+                "id": 3,
+                "favorite": 1
+            }
+        ],
+        "Alarms": [],
+        "SuggestedContacts": [],
+        "AnimationData": [],
+        "isOpen": false,
+        "id": 1,
+        "Hashtags": [],
+        "Garage": [],
+        "CallData": []
+    },
+    "applications": [
+        {
+            "label": "Phone",
+            "blockedJobs": [],
+            "job": false,
+            "app": "phone",
+            "image": "img/apps/phone.png",
+            "notificationSound": "",
+            "hideInSettingsNotifications": true
+        },
+        {
+            "label": "Messages",
+            "blockedJobs": [],
+            "job": false,
+            "app": "messages",
+            "image": "img/apps/messages.png"
+        },
+        {
+            "label": "Settings",
+            "blockedJobs": [],
+            "job": false,
+            "app": "settings",
+            "image": "img/apps/settings.png"
+        },
+        {
+            "label": "Camera",
+            "app": "camera",
+            "image": "img/apps/camera.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Mail",
+            "app": "mail",
+            "image": "img/apps/mail.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Contacts",
+            "app": "contacts",
+            "image": "img/apps/contacts.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "app": "discord",
+            "image": "img/apps/discord.png",
+            "label": "Discord",
+            "category": "Social",
+            "job": false,
+            "blockedJobs": {}
+        },
+        {
+            "app": "facetime",
+            "image": "img/apps/facetime.png",
+            "label": "FaceTime",
+            "category": "Social",
+            "job": false,
+            "blockedJobs": {}
+        },
+        {
+            "label": "Whatsapp",
+            "blockedJobs": [],
+            "job": false,
+            "app": "whatsapp",
+            "image": "img/apps/whatsapp.png"
+        },
+        {
+            "label": "Social Media",
+            "blockedJobs": [],
+            "job": false,
+            "app": "socialMedia-group",
+            "items": [
+                {
+                    "label": "Twitter",
+                    "app": "twitter",
+                    "image": "img/apps/twitter.png",
+                    "blockedJobs": [],
+                    "job": false
+                },
+                {
+                    "label": "Instagram",
+                    "app": "instagram",
+                    "image": "img/apps/instagram.png",
+                    "blockedJobs": [
+                        "police"
+                    ],
+                    "job": false
+                },
+                {
+                    "label": "Tinder",
+                    "blockedJobs": [],
+                    "job": false,
+                    "app": "tinder",
+                    "image": "img/apps/tinder.png"
+                },
+                {
+                    "label": "Home",
+                    "blockedJobs": [],
+                    "job": false,
+                    "app": "houses",
+                    "image": "img/apps/houses.png"
+                },
+                {
+                    "label": "Yellow Pages",
+                    "blockedJobs": [],
+                    "job": false,
+                    "app": "yellowpages",
+                    "image": "img/apps/yellowpages.png"
+                },
+                {
+                    "label": "Weather",
+                    "app": "weather",
+                    "image": "img/apps/weather.png",
+                    "blockedJobs": [],
+                    "job": false
+                },
+                {
+                    "label": "Spotify",
+                    "app": "spotify",
+                    "image": "img/apps/spotify.png",
+                    "blockedJobs": [],
+                    "job": false
+                }
+            ]
+        },
+        {
+            "label": "State",
+            "blockedJobs": [],
+            "job": false,
+            "app": "state",
+            "image": "img/apps/state.png"
+        },
+        {
+            "label": "Reminders",
+            "app": "reminder",
+            "image": "img/apps/reminders.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Gallery",
+            "app": "gallery",
+            "image": "img/apps/gallery.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Job Center",
+            "app": "jobcenter",
+            "image": "img/apps/jobcenter.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Health",
+            "blockedJobs": [],
+            "job": false,
+            "app": "health",
+            "image": "img/apps/health.png",
+            "hideInSettingsNotifications": true
+        },
+        {
+            "label": "Notes",
+            "blockedJobs": [],
+            "job": false,
+            "app": "notes",
+            "image": "img/apps/notes.png",
+            "hideInSettingsNotifications": true
+        },
+        {
+            "label": "Calculator",
+            "blockedJobs": [],
+            "job": false,
+            "app": "calculator",
+            "image": "img/apps/calculator.png",
+            "hideInSettingsNotifications": true
+        },
+        {
+            "label": "YouTube",
+            "app": "youtube",
+            "image": "img/apps/youtube.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "App Store",
+            "app": "store",
+            "image": "img/apps/store.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Stock",
+            "app": "crypto",
+            "image": "img/apps/stock.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Wallet",
+            "blockedJobs": [],
+            "job": false,
+            "app": "bank",
+            "image": "img/apps/wallet.png"
+        },
+        {
+            "label": "Tips",
+            "blockedJobs": [],
+            "job": false,
+            "app": "help",
+            "image": "img/apps/tips.png"
+        },
+        {
+            "label": "Clock",
+            "blockedJobs": [],
+            "job": false,
+            "app": "clock",
+            "image": "img/apps/clock.png"
+        },
+        {
+            "label": "Aventon",
+            "blockedJobs": [],
+            "job": false,
+            "app": "rentel",
+            "image": "img/apps/rentel.png"
+        },
+        {
+            "label": "Uber Eats",
+            "blockedJobs": [],
+            "job": false,
+            "app": "uber",
+            "image": "img/apps/ubereats.png"
+        },
+        {
+            "label": "Darkweb",
+            "app": "darkweb",
+            "blockedJobs": [],
+            "image": "img/apps/darkweb.png"
+        },
+        {
+            "label": "Racing",
+            "app": "racing",
+            "blockedJobs": [],
+            "image": "img/apps/racing.png"
+        },
+        {
+            "label": "Darkchat",
+            "app": "darkchat",
+            "blockedJobs": [],
+            "image": "img/apps/darkchat.png"
+        },
+        {
+            "label": "Uber",
+            "app": "uberRider",
+            "blockedJobs": [],
+            "image": "img/apps/uber.png"
+        },
+        {
+            "label": "Tiktok",
+            "app": "tiktok",
+            "blockedJobs": [],
+            "image": "img/apps/tiktok.png"
+        },
+        {
+            "label": "News",
+            "app": "weazel",
+            "blockedJobs": [],
+            "image": "img/apps/news.png"
+        },
+        {
+            "label": "Market",
+            "app": "market",
+            "blockedJobs": [],
+            "image": "img/apps/market.png"
+        },
+        {
+            "label": "Mario",
+            "app": "mario",
+            "game": {
+                "iframe": "https://funhtml5games.com?embed=mariokart",
+                "rotate": true,
+                "name": "mario",
+                "css": {
+                    "border": "none",
+                    "top": "26%",
+                    "left": "-31%",
+                    "transform": "rotate(90deg)",
+                    "height": "330px",
+                    "position": "absolute",
+                    "width": "528px"
+                }
+            },
+            "image": "img/apps/mariokart.png",
+            "blockedJobs": []
+        },
+        {
+            "label": "Safari",
+            "app": "safari",
+            "game": {
+                "iframe": "https://www.bing.com",
+                "rotate": false,
+                "name": "safari",
+                "css": {
+                    "top": "3rem",
+                    "border": "none",
+                    "height": "100%",
+                    "position": "absolute",
+                    "width": "100%"
+                }
+            },
+            "image": "img/apps/safari.png",
+            "blockedJobs": []
+        },
+        {
+            "label": "Maps",
+            "app": "map",
+            "blockedJobs": [],
+            "image": "img/apps/maps.png"
+        },
+        {
+            "label": "Garage",
+            "app": "garage",
+            "image": "img/apps/garage.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Twitter",
+            "app": "twitter",
+            "image": "img/apps/twitter.png",
+            "blockedJobs": [],
+            "job": false
+        },
+        {
+            "label": "Instagram",
+            "app": "instagram",
+            "image": "img/apps/instagram.png",
+            "blockedJobs": [
+                "police"
+            ],
+            "job": false
+        }
+    ],
+    "phoneNumber": "5532460102",
+    "PlayerJob": "unemployed",
+    "startupHide": true,
+    "Volume": 100
+}

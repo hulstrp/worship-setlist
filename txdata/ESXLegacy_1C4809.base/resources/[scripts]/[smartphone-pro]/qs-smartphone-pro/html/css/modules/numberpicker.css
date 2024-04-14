@@ -1,0 +1,78 @@
+.picker-wrapper,
+.picker-wrapper * {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+}
+ 
+.clock-selector-timer {
+    position: absolute;
+    background: gray;
+    opacity: 0.2;
+    height: 30px;
+    width: 90%;
+    left: 20px;
+    top: 200px;
+    border-radius: 8px;
+}
+ 
+.picker-wrapper {
+    text-align: center;
+    position: relative;
+    height: 210px;
+    display: inline-block;
+    line-height: 30px;
+    width: 100%;
+    font-size: 23px;
+    perspective: 1000px;
+    perspective-origin: center center;
+}
+
+.picker-scroller { 
+    -webkit-transition: -webkit-transform 100ms ease;
+    -webkit-transform: translateZ(-90px) rotateX(0deg);
+    -webkit-transform-style: preserve-3d;
+    height: 100%;
+}
+
+.picker-scroller .option {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    transition: all 300ms;
+    color: lightgray;
+    transform-origin: 50% 50%;
+    -webkit-transform-style: preserve-3d;
+}
+
+
+.picker-up {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 90px;
+}
+
+.picker-down {
+    position: absolute;
+    top: 120px;
+    z-index: 2;
+    width: 100%;
+    height: 90px;
+}
+
+.clone-scroller {
+    z-index: 5;
+    overflow: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px
+}
+
+.clone-scroller .option {
+    visibility: hidden;
+}

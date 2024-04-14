@@ -1,0 +1,370 @@
+.reminder-app {
+	padding-top: 50px;
+	background: var(--main-background-color-reminders);
+}
+
+.reminder-app h1 {
+	position: relative;
+	top: 20px;
+	font-size: 21px;
+	font-weight: 600;
+	width: 89%;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.reminder-search {
+	position: relative;
+	top: 30px;
+	width: 90% !important;
+	background: var(--main-superficial-color) !important;
+	margin: 0 auto;
+}
+
+#reminders {
+	width: 100%;
+	padding: 0 15px;
+	width: 91%;
+	height: auto;
+	position: relative;
+	top: 25px;
+	max-height: 46.8%;
+	margin: 0 auto;
+	overflow: auto;
+	background: var(--main-superficial-color);
+	border-radius: 10px;
+}
+
+#reminders::-webkit-scrollbar {
+	display: none;
+}
+
+.reminder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: baseline;
+	cursor: pointer;
+	transition: transform 0.4s;
+	padding: 5px;
+	height: 56px;
+	border-bottom: 1px solid var(--dark-border-color);
+}
+
+.reminder:last-child {
+	border-bottom: none;
+}
+
+.reminder i {
+	position: relative;
+	text-align: right;
+	bottom: 17px;
+	color: var(--dark-item-icon);
+}
+
+.reminder-time {
+	position: relative;
+	font-size: 13px;
+	text-align: right;
+	width: 90%;
+	top: 10px;
+	color: var(--dark-item-icon);
+}
+
+.reminder-header {
+	position: relative;
+	width: 56%;
+	right: 13px;
+	padding: 10px;
+	line-height: 0;
+	top: 17px;
+	font-size: 18px;
+	color: var(--text-color);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#create-reminder {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	bottom: 0;
+	padding: 0 15px;
+	border-top: 1px solid var(--border-color);
+	background: var(--main-superficial-color);
+	width: 100%;
+	height: 80px;
+	padding-bottom: 20px;
+}
+
+#create-reminder p {
+	position: relative;
+	top: 4px;
+	color: var(--blue-text);
+	font-size: 17px;
+	font-weight: 600;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#create-reminder i {
+	color: var(--blue-text);
+	font-size: 22px;
+	position: relative;
+	left: 3px;
+	cursor: pointer;
+}
+
+#editCreateReminder {
+	position: absolute;
+	top: 120%;
+	display: none;
+	padding: 50px 15px;
+	background: var(--main-background-color-reminders);
+	width: 100%;
+	height: 100%;
+}
+
+#editCreateReminder h4 {
+	width: 65%;
+	margin-left: 20px;
+	text-align: center;
+}
+
+#editCreateReminder header {
+	display: flex;
+	font-size: 17px;
+	position: relative;
+	top: 5px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#editCreateReminder header a {
+	color: var(--blue-text);
+	cursor: pointer;
+}
+
+.reminder-info {
+	position: relative;
+	top: 30px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 9px;
+	background: var(--main-superficial-color);
+}
+
+.reminder-info {
+	margin-bottom: 20px;
+}
+
+.reminder-info input {
+	border: none;
+	background: none;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.reminder-info input:not(:last-child) {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+#reminder-widget-header a {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.reminder-grid {
+	position: relative;
+	top: 35px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 100%;
+	padding: 20px;
+}
+
+.reminder-square {
+	width: 48%;
+	height: 85px;
+	border-radius: 9px;
+	background: var(--main-superficial-color);
+	padding: 20px;
+	margin-bottom: 20px;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.reminder-icon {
+	height: 32px;
+	width: 32px;
+	padding-top: 5px;
+	border-radius: 50%;
+	position: relative;
+	bottom: 8px;
+	right: 8px;
+}
+
+.reminder-icon i {
+	color: white;
+	font-size: 15px
+}
+
+.reminder-label {
+	position: relative;
+	font-size: 17px;
+	text-align: left;
+	right: 8px;
+	top: 4px;
+	color: gray;
+}
+
+.reminder-count {
+	position: relative;
+	bottom: 72px;
+	left: 65px;
+	font-size: 24px;
+	font-weight: bold;
+	white-space: nowrap;
+	width: 80px;
+	overflow: hidden;
+	text-align: right;
+}
+
+.phone-applications .reminder-widget {
+	background: var(--calendar-widget);
+}
+
+.reminder-widget-information {
+	width: 100%;
+	height: 35%;
+}
+
+.phone-applications .reminder-widget .reminder-widget-count {
+	position: relative;
+	bottom: 30px;
+	font-size: 28px;
+	font-weight: bold;
+	float: right;
+	right: 5px;
+	color: var(--text-color)
+}
+ 
+.phone-applications .reminder-widget .reminder-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+
+.phone-applications .reminder-widget .reminder-icon i {
+	background: #5cc465;
+	padding: 10px;
+	border-radius: 50%;
+	font-size: 15px;
+}
+
+.phone-applications .reminder-widget #reminder-widget-header a {
+	color: #5cc465;
+	width: 145px;
+	float: left;
+	position: relative;
+	bottom: 7px;
+	text-transform: none;
+}
+
+.phone-applications .reminder-widget .reminder-widget-list {
+	position: relative;
+	bottom: 5px;
+}
+
+.phone-applications .reminder-widget .reminder-widget-list a {
+	color: var(--text-color);
+	height: 20px;
+	margin-bottom: 5px;
+	width: 145px;
+	font-size: 13px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-weight: 100;
+}
+
+.phone-applications .reminder-widget .reminder-widget-list p {
+	display: none;
+}
+
+#lock-screen-customize .reminder-widget-information {
+	display: none;
+}
+ 
+.contenido .reminder-widget {
+	background: var(--calendar-widget);
+}
+
+.reminder-widget-information {
+	width: 100%;
+	height: 35%;
+}
+
+.contenido .reminder-widget .reminder-widget-count {
+	position: relative;
+	bottom: 31px;
+	font-size: 30px;
+	font-weight: bold;
+	float: right;
+	right: 5px;
+	color: var(--text-color)
+}
+ 
+.contenido .reminder-widget .reminder-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+
+.contenido .reminder-widget .reminder-icon i {
+    background: #5cc465;
+	padding: 11px;
+	border-radius: 50%;
+	font-size: 18px;
+}
+
+.contenido .reminder-widget #reminder-widget-header a {
+	color: #5cc465;
+	width: 158px;
+	height: 20px;
+	float: left;
+	font-size: 14px;
+	position: relative;
+	bottom: 3px;
+	text-transform: none;
+}
+
+.contenido .reminder-widget .reminder-widget-list {
+	position: relative;
+	top: 0;
+}
+
+.contenido .reminder-widget .reminder-widget-list a {
+	color: var(--text-color);
+	height: 20px;
+	margin-bottom: 5px;
+	width: 145px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	font-weight: 100;
+}
+
+.contenido .reminder-widget .reminder-widget-list p {
+	display: none;
+}

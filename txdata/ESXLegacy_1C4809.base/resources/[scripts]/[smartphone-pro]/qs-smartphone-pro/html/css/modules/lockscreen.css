@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@500&display=swap');
+
+:root {
+    --lock-screen-color: #fff
+}
+
+#lockScreen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%);
+}
+
+#lock-screen {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 99999999;
+    cursor: grab;
+    transform: translateX(0);
+}
+
+#lock-screen-widgets {
+    display: grid !important;
+}
+
+#lock-screen-specified {
+    position: fixed;
+    width: 100%;
+    height: 83px;
+    bottom: 0px;
+    cursor: grab;
+}
+
+.lock-screen-top {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    width: 100%;
+    opacity: 0.75
+}
+
+#lock-screen-middle {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0px 12px;
+}
+
+.lockIcon {
+    width: 12px;
+    height: 9px;
+    margin: 20px auto 0px auto;
+    border-radius: 1.7px;
+    background-color: #fff;
+    position: relative;
+}
+
+#lock-screen-main-container {
+    transition: all 0.4s ease-in-out;
+}
+
+#lock-screen-main-container.list {
+    /* transform: translateY(30%); */
+}
+
+#lock-screen-main-container:not(:has(.unfolded)):is(.stack, .count) {
+    transform: translateY(12%);
+}
+
+#lock-screen-main-container._hide {
+    transform: translateY(100%) !important;
+    opacity: 0;
+}
+
+.phone-lockscreen-island .lockIcon {
+    margin: 0px !important;
+    bottom: 1px;
+    left: 4px;
+}
+
+.lockIcon:before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 10px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border: 1.8px solid #fff;
+}
+
+.lock-screen-notifications {
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    height: 10rem;
+    width: 100%;
+    transition: 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lock-screen-notification {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+    border-radius: 23px;
+    background: var(--notification-lockscreen) !important;
+    backdrop-filter: saturate(130%) blur(5px);
+}
+
+.lock-screen-notification-wrapper {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    transition: 0.6s ease-in-out;
+}
+
+.lock-screen-notifications .lock-screen-notification:only-child {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.lock-screen-notification-wrapper .lock-screen-notification-interaction {
+    opacity: 0 !important;
+}
+
+.lock-screen-notifications:not(.unfolded) .lock-screen-notification-wrapper:nth-child(1) .lock-screen-notification-interaction.active,
+.lock-screen-notifications.unfolded .lock-screen-notification-wrapper .lock-screen-notification-interaction.active {
+    opacity: 1 !important;
+}
+
+.lock-screen-notification-interaction {
+    transform: translateX(100%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.lock-screen-notification-interaction button {
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s;
+    background: var(--notification-lockscreen);
+    backdrop-filter: saturate(130%) blur(20px);
+    height: 100%;
+    width: 100%;
+    padding: 15px 22px;
+    border-radius: 16px;
+    color: var(--notification-lockscreen-text-bold);
+}
+
+.lock-screen-notifications:not(.unfolded):has(.lock-screen-notification-wrapper .lock-screen-notification-interaction.active),
+.lock-screen-notifications.unfolded .lock-screen-notification-wrapper:has(.lock-screen-notification-interaction.active) {
+    left: -150px !important;
+}
+
+.lock-screen-notification-interaction.active {
+    transform: translateX(0);
+    width: 0;
+    height: 100%;
+    opacity: 1;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.lock-screen-notifications.unfolded .lock-screen-notification {
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.lock-screen-notifications.unfolded .lock-screen-notification .more {
+    opacity: 0;
+}
+
+.lock-screen-notification-head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    color: var(--notification-lockscreen-text-bold);
+}
+
+.lock-screen-notification-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lock-screen-notification-head .text-muted {
+    color: var(--notification-lockscreen-text);
+    margin-right: 5px;
+}
+
+.lock-screen-notification-body {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 78%;
+    left: 63px;
+    position: relative;
+    bottom: 5px;
+}
+
+.lock-screen-notification-msg_sender {
+    font-weight: bold;
+    padding-top: 5px;
+    color: var(--notification-lockscreen-text-bold);
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+.lock-screen-notification-msg {
+    color: var(--notification-lockscreen-text);
+    font-size: 15px;
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+.lock-screen-notification-app_img {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin-right: 10px;
+    /* Espacio entre la imagen y los textos */
+}
+
+.lock-screen-notification-app_name {
+    display: none;
+    /* Oculta el nombre de la aplicaciÃ³n */
+}
+
+
+#lock-screen-edit-confirmation {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: end;
+    transform: translateX(-50%) scale(1);
+    left: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease all 0.2s;
+    position: absolute;
+    top: 2rem;
+    z-index: 99999999999999999;
+    width: 90%;
+    justify-content: space-between;
+}
+
+#lock-screen-edit-confirmation * {
+    background-color: hsla(0, 0%, 65%, .75);
+    padding: 0 0.9em;
+    border-radius: 20px;
+    height: 2.7rem;
+    width: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transform: scale(0);
+    transition: ease all 0.2s;
+}
+
+#phone-device-screen:has(#lock-screen.editable) #lock-screen-edit-confirmation * {
+    transform: scale(1);
+}
+
+#phone-device-screen:has(#lock-screen.editable) #lock-screen-edit-confirmation {
+    display: flex;
+}
+
+.lock-screen-top .time {
+    /* margin: 12px 0px; */
+    color: var(--lock-screen-color);
+    font-size: 10rem;
+    letter-spacing: 0.0rem;
+    width: 100%;
+}
+
+#lock-screen:is(.editable) :where(.time, .date, .date *) {
+    transition: all 1s cubic-bezier(0.57, 0.13, 0.18, 0.98) !important;
+}
+
+#lock-screen:is(.editable) :where(.time, .date, #lock-screen-widgets) {
+    box-shadow: 0 0 0 2px rgb(255 255 255 / 0.1);
+    border-radius: 12px;
+    margin: 12px 0px;
+}
+
+#lock-screen:is(.editable) :where(#lock-screen-main-container, #lock-screen-down, .face-id-wrapper, .lockIcon) {
+    display: none !important;
+}
+
+#lock-screen-widgets .phone-widget {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#lock-screen-widgets .batteryInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    top: 2px;
+}
+
+.lock-screen-widget-bg .batteryInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    top: 2px;
+}
+
+#widget-customize .phone-widget {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.lock-screen-widget-bg .batteryInfo .iconWrapper svg path,
+.lock-screen-widget-bg .batteryInfo .iconWrapper svg circle {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.lock-screen-top .date {
+    margin-top: 12px;
+    top: 170px;
+    font-size: 2rem;
+    right: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--lock-screen-color);
+    width: 100%;
+}
+
+.lock-screen-top .date * {
+    color: var(--lock-screen-color);
+}
+
+.down_padding {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffff;
+    cursor: pointer;
+}
+
+.down_padding:hover {
+    transition: background-color 0.8s;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.app_notify.hide {
+    display: none;
+    visibility: hidden;
+}
+
+#lock-screen-down {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 90%;
+    height: 10%;
+    bottom: 0px;
+    margin-top: 15px;
+    padding-bottom: 40px;
+    z-index: 999;
+}
+
+.face-id-wrapper {
+    width: 24px;
+    height: 24px;
+    bottom: -2px;
+    right: 7px;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.face-id-wrapper svg {
+    position: absolute;
+    fill: #aaa;
+    stroke: #aaa;
+}
+
+.face-id-wrapper.active .face-id-default {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: opacity 1.5s, transform 1s;
+    fill: lightblue;
+    stroke: lightblue;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 3px solid #000;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 0;
+}
+
+.active .circle {
+    opacity: 1;
+    transition: opacity 0.7s, transform 2.2s;
+}
+
+.circle.green {
+    border: 3px solid #88ef88;
+}
+
+.circle.blue {
+    border: 3px solid #0aaaf7;
+}
+
+.circle.purple {
+    border: 3px solid #ea54ea;
+}
+
+.active .circle.green {
+    transform: rotateX(360deg);
+}
+
+.active .circle.blue {
+    transform: rotateY(360deg);
+}
+
+.active .circle.purple {
+    transform: rotateY(360deg) rotateX(360deg);
+}
+
+.completed .circle.purple {
+    border: 3px solid #FFF;
+    transition: border 0.7s;
+}
+
+.path-tick {
+    opacity: 0;
+}
+
+.completed .path-tick {
+    stroke-dasharray: 49.4974746704;
+    stroke-dashoffset: 0;
+    animation: dash 0.6s linear forwards;
+    stroke-opacity: 1;
+    transition: stroke-opacity 0.1s step;
+    opacity: 1;
+}
+
+/*   delay-time before animation */
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 49.4974746704;
+        stroke-opacity: 1;
+    }
+
+    60% {
+        stroke-dashoffset: 49.4974746704;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
+    }
+}
+
+#time-fonts ul li {
+    font-size: 7rem;
+    color: var(--text-color);
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+#time-fonts ul li input {
+    display: none;
+}
+
+#time-fonts ul li label {
+    padding: 0 12px;
+    border-radius: 12px;
+}
+
+#time-fonts ul li input:checked+label {
+    box-shadow: 0 0 0 2px rgb(59 130 246);
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-prism {
+    font-family: 'Tilt Prism', cursive;
+}
+
+.font-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-indie {
+    font-family: 'Indie Flower', cursive;
+}
+
+.font-marker {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.font-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+.font-fredoka {
+    font-family: 'Fredoka', cursive;
+}
+
+.font-lemon {
+    font-family: 'Lemon', cursive;
+}
+
+.font-moirai {
+    font-family: 'Moirai One', cursive;
+}
+
+.font-tsukimi {
+    font-family: 'Tsukimi Rounded', serif;
+}
+
+.time-color label {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.time-color input {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.time-color input:checked+label {
+    box-shadow: 0 0 0 4px rgb(59 130 246);
+    /* padding: 12px; */
+}
+
+.bg-rainbow {
+    background: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+}
+
+#lock-screen-customize {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#lock-screen-customize.active {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+#widget-customize-list {
+    display: grid !important;
+}
+
+:is(#lock-screen-widgets, #widget-customize-list) .weather-rain-percentage-widget {
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+
+.weather-rain-percentage-widget .donut-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--lock-screen-color);
+}
+
+.weather-rain-percentage-widget .donut-text i {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    font-size: 12px;
+    transform: translateX(-50%);
+}
+
+.weather-mini-widget {
+    width: 100%;
+    background-color: rgb(0 0 0 / 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+    grid-column: span 2;
+    border-radius: 12px;
+    grid-gap: 0;
+    grid-template-rows: 2fr 2fr;
+    align-items: start;
+    justify-content: center;
+}
+
+:is(#lock-screen-widgets, #widget-customize-list) * {
+    color: var(--lock-screen-color);
+    transition: all 1s cubic-bezier(0.57, 0.13, 0.18, 0.98) !important;
+}
+
+:is(#lock-screen-widgets, #widget-customize-list) .weazel-widget-contents .weazel-widget-last:nth-child(2) {
+    display: none;
+}
+
+.weather-temp span {
+    font-size: 1.7rem !important;
+    color: var(--text-color);
+}
+
+.weather-temp i {
+    color: var(--text-color);
+}
+
+#widget-customize .weather-temp {
+    color: var(--lock-screen-color);
+}
+
+:is(#lock-screen-widgets, #widget-customize-list) :is(.weazel-widget, .reminder-widget, .weather-mini-widget) {
+    grid-column: span 2;
+    height: 8rem;
+    border-radius: 12px;
+    overflow: inherit;
+}
+
+:is(#lock-screen-widgets, #widget-customize-list) .batteryInfo .iconWrapper:after {
+    border-color: var(--lock-screen-color);
+    transition: all 1s cubic-bezier(0.57, 0.13, 0.18, 0.98) !important;
+}
+
+.lock-screen-widget-bg {
+    background-color: rgb(0 0 0 / 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    flex-direction: column;
+    border-radius: 12px;
+    grid-gap: 0;
+    position: relative;
+    height: 8rem;
+}
+
+#lock-screen-widgets {
+    height: 10rem;
+}
+
+#lock-screen-widgets .remove-widget {
+    display: flex;
+    background-color: hsla(0, 0%, 30%, .9);
+    height: 2rem;
+    left: 0.25rem;
+    pointer-events: all;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 2rem;
+    z-index: 99999999;
+    position: absolute;
+    top: -10px;
+    border-radius: 9999px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#lock-screen-widgets .remove-widget i {
+    color: #000 !important;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+body:has(#widget-customize.hide) #lock-screen-widgets .remove-widget {
+    opacity: 0;
+    pointer-events: none;
+}
+
+body:not(:has(#lock-screen-customize.active)) #lock-screen-widgets .remove-widget {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#lock-screen-notifications-container {
+    position: relative;
+    z-index: 9999;
+}

@@ -1,0 +1,85 @@
+#health-settings {
+    top: 8%;
+    transform: translateY(100%);
+    transition: 0.5s;
+    opacity: 0.5;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+#health-settings.active {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+#health-settings header a {
+    position: relative;
+    bottom: 5px;
+    font-weight: 100;
+}
+
+#health-settings header i {
+    top: 20px;
+    right: 20px;  
+}
+
+.health-app-header {
+    position: relative;
+    top: 6px;
+}
+
+.health-app-header i {
+    position: relative;
+    right: 12px;
+}
+
+
+.health-app-header a {
+    position: relative;
+    width: 90%;
+    font-size: 19px;
+    height: 25px;
+    font-weight: bold;
+    left: 12px;
+}
+
+.health-app-content {
+    position: relative;
+    top: 5px;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.health-app-content header {
+    position: relative;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.health-app-content header a {
+    position: relative;
+    left: 5px;
+}
+
+.health-app-content section {
+    position: relative;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.health-app-content section footer a {
+    position: relative;
+    margin-left: 5px;
+    top: 15px;
+}
+
+#health-form {
+    width: 95%;
+    margin: 0 auto;
+    height: 84%;
+}
+
+#health-thirsty-notice-value-container a,
+#health-hungry-notice-value-container a,
+#health-health-notice-value-container a {
+    font-size: 16px;
+} 

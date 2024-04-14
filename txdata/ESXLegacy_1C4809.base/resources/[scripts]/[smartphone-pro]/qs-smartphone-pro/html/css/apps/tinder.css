@@ -1,0 +1,508 @@
+:root {
+    --tinder-bg: #fe3c72;
+}
+
+#tinder-register-firstscreen footer a {
+    text-align: center;
+}
+
+#tinder-register-firstscreen button {
+    height: 50px;
+}
+
+#tinder-forgot-password-screen,
+#tinder-login-screen,
+#tinder-register-screen-ninth,
+#tinder-register-screen-eighth,
+#tinder-register-screen-seventh,
+#tinder-register-screen-sixth,
+#tinder-register-screen-fifth,
+#tinder-register-screen-fourth,
+#tinder-register-screen-third,
+#tinder-register-screen-second,
+#tinder-register-screen-first {
+    background: linear-gradient(to bottom, rgba(254, 60, 114, 0.8), #f80d5e);
+}
+
+#tinder-forgot-password-screen .fa-chevron-left,
+#tinder-login-screen .fa-chevron-left,
+#tinder-register-screen-ninth .fa-chevron-left,
+#tinder-register-screen-eighth .fa-chevron-left,
+#tinder-register-screen-seventh .fa-chevron-left,
+#tinder-register-screen-sixth .fa-chevron-left,
+#tinder-register-screen-fifth .fa-chevron-left,
+#tinder-register-screen-fourth .fa-chevron-left,
+#tinder-register-screen-third .fa-chevron-left,
+#tinder-register-screen-second .fa-chevron-left,
+#tinder-register-screen-first .fa-chevron-left {
+    font-size: 26px;
+    color: white;
+}
+
+#tinder-login-form header,
+#tinder-form-photos header,
+#tinder-my-gender-form header,
+#tinder-show-me-form header,
+#tinder-bio-form header,
+#tinder-password-form header,
+#tinder-birthday-form header,
+#tinder-first-name-form header,
+#tinder-code-form header,
+#tinder-number-form header {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+#tinder-birthday-form a,
+#tinder-first-name-form a,
+#tinder-number-form a {
+    color: lightgray;
+    text-align: center;
+    font-size: 15px;
+}
+
+#tinder-birthday {
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+#tinder-forgot-password-accounts .flex-col {
+    margin-left: 5px;
+    color: black !important;
+}
+
+#tinder-forgot-password-accounts .flex-col a {
+    color: black !important;
+}
+
+#tinder-forgot-password-accounts article {
+    padding: 10px;
+    padding-bottom: 10px;
+    background: white;
+    border-radius: 30px;
+}
+
+#tinder-login-phone {
+    margin-bottom: 10px;
+}
+
+.tinder-screen {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+}
+
+.tinder-bg {
+    background: linear-gradient(to bottom, rgba(254, 60, 114, 0.8), #f80d5e);
+}
+
+.tinder-text {
+    color: var(--tinder-bg);
+}
+
+.tinder-register-button {
+    width: 100%;
+    height: 40px;
+    border-radius: 22px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.tinder-register-screen {
+    padding: 0 18.38px;
+}
+
+.tinder-form {
+    padding: 9.19px 18.38px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.tinder-input {
+    border-bottom: 3px solid var(--border-color);
+    padding-top: 4px;
+    padding-left: 13px;
+    border-radius: 15px;
+    background: white;
+    height: 40px;
+    color: gray;
+}
+
+.tinder-form-button {
+    position: absolute;
+    bottom: 4%;
+    height: 50px;
+    width: 83%;
+    border-radius: 24px;
+    background: white;
+    color: black;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0.4;
+    cursor: pointer
+}
+
+.tinder-form-button:hover {
+    scale: 1.05;
+}
+
+:where(.tinder-form:has(#tinder-form-photo-list img), .tinder-form:valid) .tinder-form-button {
+    background: white;
+    color: black;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#tinder-form-photo-list a {
+    background: #f04777;
+    color: white;
+}
+
+#tinder-form-photo-list .w-10rem,
+#tinder-form-photo-list img {
+    border-radius: 14px;
+}
+
+.tinder-button-checkboxes input {
+    display: none;
+}
+
+.tinder-button-checkboxes span {
+    display: inline-flex;
+    width: 100%;
+    height: 36.76px;
+    color: black;
+    background: white;
+    border: 2px solid var(--dark-background-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.tinder-button-checkboxes span:hover {
+    scale: 1.03;
+}
+
+.tinder-button-checkboxes input[type="radio"]:checked+span {
+    background-color: lightgray;
+    color: black;
+}
+
+#tinder-home-page .mt-5 {
+    display: flex;
+    position: relative;
+    top: 10px;
+    justify-content: center;
+}
+
+.tinder-home-footer-button {
+    color: #39daaf;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background-color: var(--main-background-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 0 20px; /* Ajusta el espacio entre los botones */
+}
+
+.tinder-home-footer-button i {
+    font-size: 25px;
+    padding-left: 2px;
+    padding-top: 3px;
+}
+
+.tinder-app .swiper-pagination {
+    top: 6.433px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    left: 4.5% !important;
+}
+
+.tinder-message-time {
+    position: relative;
+    top: 0;
+    font-size: 13px;
+    width: 50%;
+    text-align: right;
+}
+
+.tinder-text-message {
+    position: relative;
+    left: 8px;
+    bottom: 2px;
+    width: 200px !important;
+}
+
+#tinder-chat-page header {
+    background: rgba(238, 238, 238, 0.7);
+}
+
+#tinder-chat-page footer {
+    background: rgba(238, 238, 238, 0.7);
+}
+
+#tinder-chat-home {
+    position: relative;
+    top: 12.5%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#tinder-chat-home header {
+    border-radius: 10px;
+    background: var(--dark-background-color);
+}
+
+#tinder-chat-list {
+    padding-top: 5px;
+}
+
+#tinder-chat-new-matches {
+    position: relative;
+    top: 5px;
+}
+
+#tinder-chat-new-matches header {
+    background: none;
+    font-weight: bold;
+}
+
+#tinder-chat-chats {
+    position: relative;
+    top: 20px;
+    height: 67%;
+    padding-bottom: 30px;
+}
+
+#tinder-chat-chats header {
+    background: none;
+    font-weight: bold;
+}
+
+#tinder-profile-page {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.tinder-prev-user-image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999 !important;
+    opacity: 0;
+}
+
+.tinder-next-user-image {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999 !important;
+    opacity: 0;
+}
+
+.tinder-chat-message {
+    max-width: 100%;
+    gap: 4px;
+    background: var(--dark-background-color);
+    border-radius: 24px;
+    padding: 10px 15px;
+    align-self: flex-start;
+    display: flex;
+    position: relative;
+}
+
+.tinder-chat-message img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+}
+
+.tinder-chat-message p {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+.tinder-chat-message-container.self {
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.tinder-chat-message-container.self .tinder-chat-message {
+    align-self: flex-end;
+    justify-content: flex-end;
+    background-color: var(--tinder-bg);
+}
+
+.tinder-chat-message-container.self .tinder-chat-message p {
+    color: #fff;
+}
+
+.tinder-app .emojionearea {
+    margin: 0 auto;
+    color: var(--text-color) !important;
+    width: 84% !important;
+    background: var(--border-light-color) !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+.tinder-app .emojionearea-editor {
+    color: var(--text-color) !important;
+    width: 80% !important;
+    left: 0px !important;
+}
+
+
+.tinder-progress {
+    height: 3px;
+    flex-grow: 1;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: 100% 50%;
+    animation-timing-function: linear;
+    animation-delay: 0.2s;
+}
+
+.tinder-progress-bar {
+    width: 100%;
+    background-color: white;
+}
+
+.tinder-user-images-container {
+    transition: all 0.6s ease;
+    perspective: 1000px;
+}
+
+.tinder-user-images-container.liked {
+    transform: translateX(120%) rotateY(-180deg) rotateZ(10deg) translateY(-200px);
+    opacity: 0.5;
+}
+
+.tinder-user-images-container.undo {
+    transform: translateX(-120%) rotateY(180deg) rotateZ(-10deg) translateY(-200px);
+}
+
+.tinder-user-images-container.disliked {
+    transform: translateX(-120%) perspective(1000px) rotateY(180deg) rotateZ(-10deg) translateY(-200px);
+}
+
+#tinder-user-swipers {
+    position: relative;
+    height: 85%;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+#tinder-user-swipers a {
+    text-align: center;
+}
+
+.tinder-header-icon.current path {
+    color: var(--tinder-bg);
+    fill: var(--tinder-bg);
+}
+
+#tinder-matched-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://i.pinimg.com/564x/85/8b/14/858b14bab9ed4b584bb69f29ef356e8d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.tinder-user-info {
+    position: absolute;
+    bottom: 23px;
+    left: 15px;
+}
+
+.tinder-user-info a {
+    text-align: left !important;
+}
+
+.tinder-user-info-age {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tinder-home-footer {
+    position: relative;
+    bottom: 3px;
+}
+
+#tinder-chat-opened-chat footer,
+#tinder-chat-opened-chat header {
+    background: var(--dark-background-color);
+}
+
+#tinder-chat-messages {
+    padding-bottom: 5px;
+}
+
+#tinder-profile-photo-list div,
+#tinder-profile-photo-list img {
+    border-radius: 15px;
+}
+
+#tinder-profile-form .delete-photo {
+    padding-top: 11px;
+    font-size: 18px;
+}
+
+#tinder-profile-form button {
+    margin-bottom: -10px;
+}
+
+.tinder-settings-pass {
+    padding-bottom: 5%;
+}
+
+.tinder-settings-photos {
+    padding-bottom: 5%;
+}
+
+.tinder-settings-gender {
+padding-bottom: 2%;
+}
+
+#tinder-profile-gender,
+#tinder-profile-interested-in,
+#tinder-profile-bio-input,
+#tinder-profile-name-input,
+#tinder-profile-password-input {
+    border-radius: 15px;
+}

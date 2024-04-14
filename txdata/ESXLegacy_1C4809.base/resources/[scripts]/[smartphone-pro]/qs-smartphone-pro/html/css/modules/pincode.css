@@ -1,0 +1,307 @@
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    backdrop-filter: blur(8px);
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.cell .lockIcon {
+    bottom: 10%;
+    height: 12px;
+    width: 16px;
+}
+
+.cell .lockIcon::before {
+    margin-top: -3px;
+    height: 20px;
+    width: 12px;
+}
+
+#anleitung {
+    margin-bottom: 25px;
+}
+
+#anleitung span {
+    font-size: 20px;
+}
+
+#pincode {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+}
+
+#numbers {
+    position: relative;
+    top: 25px;
+    max-width: 325px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    opacity: 1;
+}
+
+#numbers.hide {
+    opacity: 0.3;
+}
+
+#pincode button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 83px;
+    height: 83px;
+    margin-bottom: 25px;
+    border: 0;
+    color: #000;
+    /* Cambiado a negro para mejorar la legibilidad */
+    font-size: 30px;
+    border-radius: 100%;
+    opacity: 1;
+    outline: 0;
+    background: rgba(255, 255, 255, 0.14);
+    /* Ajustado el fondo para hacerlo más claro */
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#pincode button span {
+    font-size: 11px;
+    color: white;
+}
+
+#pincode button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: 0;
+}
+
+#fields {
+    max-width: 200px;
+    padding: 0 20px;
+    margin: 20px auto 42px auto;
+    position: relative;
+    display: block;
+}
+
+#fields .numberfield {
+    text-align: center;
+}
+
+#fields .numberfield span {
+    height: 13px;
+    width: 13px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#fields .numberfield.active span {
+    background-color: #fff;
+}
+
+#fields .numberfield.right span {
+    background-color: #33444e;
+    border-color: #33444e;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.pincode_grid {
+    list-style: none;
+    margin-left: -20px;
+}
+
+.pincode_grid__col--1-of-3,
+.pincode_grid__col--2-of-6,
+.pincode_grid__col--4-of-12 {
+    width: 33.33333%;
+}
+
+.pincode_grid__col--1-of-4,
+.pincode_grid__col--2-of-8,
+.pincode_grid__col--3-of-12 {
+    width: 25%;
+}
+
+.pincode_grid__col {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.25em;
+    min-height: 1px;
+    padding-left: 20px;
+    vertical-align: top;
+}
+
+.pincode_grid__col a {
+    color: #fff;
+}
+
+.pincode_grid__col--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pincode_grid__col--d-first {
+    float: left;
+}
+
+.pincode_grid__col--d-last {
+    float: right;
+}
+
+.pincode_grid--no-gutter {
+    margin-left: 0;
+    width: 100%;
+}
+
+.pincode_grid--no-gutter .pincode_grid__col {
+    padding-left: 0;
+}
+
+.pincode_grid--no-gutter .pincode_grid__col--span-all {
+    margin-left: 0;
+    width: 100%;
+}
+
+.pincode_grid__col--ab {
+    vertical-align: bottom;
+}
+
+.pincode_grid__col--am {
+    vertical-align: middle;
+}
+
+.miss {
+    -webkit-animation: miss 0.8s ease-out 1;
+    animation: miss 0.8s ease-out 1;
+}
+
+@-webkit-keyframes miss {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    10% {
+        -webkit-transform: translate(-25px, 0);
+        transform: translate(-25px, 0);
+    }
+
+    20% {
+        -webkit-transform: translate(25px, 0);
+        transform: translate(25px, 0);
+    }
+
+    30% {
+        -webkit-transform: translate(-20px, 0);
+        transform: translate(-20px, 0);
+    }
+
+    40% {
+        -webkit-transform: translate(20px, 0);
+        transform: translate(20px, 0);
+    }
+
+    50% {
+        -webkit-transform: translate(-10px, 0);
+        transform: translate(-10px, 0);
+    }
+
+    60% {
+        -webkit-transform: translate(10px, 0);
+        transform: translate(10px, 0);
+    }
+
+    70% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0);
+    }
+
+    80% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes miss {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    10% {
+        -webkit-transform: translate(-25px, 0);
+        transform: translate(-25px, 0);
+    }
+
+    20% {
+        -webkit-transform: translate(25px, 0);
+        transform: translate(25px, 0);
+    }
+
+    30% {
+        -webkit-transform: translate(-20px, 0);
+        transform: translate(-20px, 0);
+    }
+
+    40% {
+        -webkit-transform: translate(20px, 0);
+        transform: translate(20px, 0);
+    }
+
+    50% {
+        -webkit-transform: translate(-10px, 0);
+        transform: translate(-10px, 0);
+    }
+
+    60% {
+        -webkit-transform: translate(10px, 0);
+        transform: translate(10px, 0);
+    }
+
+    70% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0);
+    }
+
+    80% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}

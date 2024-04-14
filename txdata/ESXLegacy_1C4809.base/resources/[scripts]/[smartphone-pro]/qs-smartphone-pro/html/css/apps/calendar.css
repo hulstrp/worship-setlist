@@ -1,0 +1,83 @@
+.calendar-widget {
+  background: var(--calendar-widget) !important;
+}
+
+.contenido .calendar-widget .calendarioWrapper {
+scale: 1.25;
+position: relative;
+top: 10px;
+}
+
+.calendar-widget .eventos {
+width: calc(100% - 112px);
+font-size: 12px;
+}
+.calendar-widget .calendarioWrapper {
+width: 120px;
+scale: 1.1
+}
+.calendar-widget .calendarioWrapper .mes {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.calendar-widget .calendarioWrapper .mes .mesName {
+position: relative;
+color: #d24f54;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 1px;
+top: 5px;
+text-transform: uppercase;
+}
+.calendar-widget .calendarioWrapper .mes .calendarioTabla .tablaHeader,
+.calendar-widget .calendarioWrapper .mes .calendarioTabla .tablaContent {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: flex-start;
+align-content: center;
+}
+.calendar-widget .calendarioWrapper .mes .calendarioTabla .tablaHeader > *,
+.calendar-widget .calendarioWrapper .mes .calendarioTabla .tablaContent > * {
+position: relative;
+left: 4px;
+bottom: 3px;
+width: 16px;
+text-align: center;
+font-size: 9px;
+font-weight: 600;
+}
+.calendar-widget .calendarioWrapper .mes .calendarioTabla .tablaHeader {
+margin: 5px auto;
+}
+.calendar-widget
+.calendarioWrapper
+.mes
+.calendarioTabla
+.tablaContent
+.diaNum {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+align-content: center;
+height: 16px;
+color: var(--text-color);
+}
+.calendar-widget
+.calendarioWrapper
+.mes
+.calendarioTabla
+.tablaContent
+.diaNum.activo {
+color: #fff;
+background-color: #d24f54;
+border-radius: 50%;
+}
+
+.diaName {
+  color: var(--text-color) !important;
+}

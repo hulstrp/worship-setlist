@@ -1,0 +1,49 @@
+#yellowpages-list {
+    margin-top: 10px;
+    padding-bottom: 110px;
+}
+
+.yellow-pages-screen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background: var(--container-dark-background-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#create-yellow-page {
+    position: sticky;
+    bottom: 4%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+
+}
+
+#create-yellow-page button {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    color: var(--invert-text-color);
+}
+
+#yellowpages-list {
+    min-height: 86%;
+    max-height: 70%;
+    overflow: auto;
+}
+
+#yellowpages-home-page header div {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#yellowpages-create-image-preview {
+    object-fit: cover;
+}

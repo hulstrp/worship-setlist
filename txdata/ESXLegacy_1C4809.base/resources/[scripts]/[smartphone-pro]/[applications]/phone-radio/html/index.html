@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+    <link rel="stylesheet" href="./themes.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.8/purify.min.js" integrity="sha512-5g2Nj3mqLOgClHi20oat1COW7jWvf7SyqnvwWUsMDwhjHeqeTl0C+uzjucLweruQxHbhDwiPLXlm8HBO0011pA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section id="phone-device">
+        <div id="application">
+            <div class="phone-recent-message-header">
+                <div class="phone-recent-message-headline" id="phfunk">Radio</div>
+            </div>
+            <div class="phone-radio-sector">
+                <div class="phone-radio-list">
+                    <div class="phone-radio-frequenz-inputs">
+                        <input class="phone-radio-frequenz-input" id="phone-radio-frequenz-input" type="number" placeholder="Select a frequency">
+                    </div>
+                    <article>
+                        <div class="phone-frequenz-button"> <button id="phone-frequenz-join-button">CONNECT</button> </div>
+                        <div class="phone-frequenz-button"> <button id="phone-frequenz-leave-button">DISCONNECT</button> </div>
+                    </article>
+                </div>
+            </div>
+            <article class="private-radios">
+                <a>Private channels</a>
+                <ul id="phone-radio-private-channels" class="radio-section"></ul>
+            </article>
+            <article class="history-radios">
+                <a>Record</a>
+                <ul id="phone-radio-history-container" class="radio-section"></ul>
+            </article>
+        </div>
+        <script src="main.js"></script>
+        <script src="app.js"></script>
+    </section>
+</body>
+
+</html>

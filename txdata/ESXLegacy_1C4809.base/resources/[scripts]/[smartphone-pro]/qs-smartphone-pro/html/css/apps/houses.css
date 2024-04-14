@@ -1,0 +1,59 @@
+.houses-app section {
+  position: absolute;
+  z-index: 1;
+}
+
+.houses-app * {
+  color: #fff;
+}
+
+
+#houses-app-bg {
+  background-image: url(../../img/houses/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  filter: brightness(0.2) blur(0.5px);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.house-item-bg {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#house-list {
+  height: 83%;
+}
+
+.house-action {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 19rem;
+  transition: all 0.3s;
+}
+
+.house-action:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.house-action-icon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.house-key-action {
+  height: 9rem;
+}
+
+#house-key-action-list {
+  max-height: 68%;
+  overflow: auto;
+}

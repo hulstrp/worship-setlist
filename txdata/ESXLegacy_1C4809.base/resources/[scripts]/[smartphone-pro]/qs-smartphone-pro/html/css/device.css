@@ -1,0 +1,249 @@
+:root {
+    --dynamic-island-default-height: 4rem;
+    --dynamic-island-default-width: 16rem;
+    --dynamic-island-signals-width: 45.5%;
+    --device-button-radius: 10px;
+    --device-button-width: 3px;
+    --phone-hide: 100%;
+    --phone-show: 0%;
+    --battery-percentage: 0%;
+}
+
+#phone-device-container {
+    width: 100%;
+    height: 100%;
+    transform: translateY(var(--phone-hide));
+    transition: transform 0.5s ease-in-out;
+}
+
+#phone-device {
+    position: absolute;
+    right: 3%;
+    display: inline;
+    padding: 1.5rem;
+    background: #000;
+    box-shadow: 0 0 0.1em 0.25em #39334d, 0 0 0 0.4em #d3cde4;
+    border-radius: 60px;
+    width: 42rem;
+    height: 88.5rem;
+    transform: scale(1.3);
+    bottom: 0px;
+    box-sizing: content-box;
+    transform-origin: bottom right;
+    margin-bottom: 2rem;
+    user-select: none;
+    transition: all .5s ease-in-out;
+    image-rendering: crisp-edges;
+}
+
+
+#phone-device::before {
+    content: "";
+    background-color: rgb(0 0 0 / 1);
+    border-radius: 54px;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    left: 0.50rem;
+    top: 0.50rem;
+    margin: 0 auto;
+    position: absolute;
+}
+
+#phone-dynamic-island-container {
+    margin: 0 auto;
+}
+
+#phone-camera {
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    cursor: default;
+    display: flex;
+    top: 2.3rem;
+    height: 3.5rem;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    right: 15rem;
+    z-index: 9999999999999;
+}
+
+#phone-camera::before {
+    aspect-ratio: 1;
+    background: radial-gradient(#6667ac, transparent 50%) no-repeat 33.3% 10%/75% 50%, radial-gradient(#454680, transparent 50%) no-repeat 60% 85%/50% 50%;
+    background-color: #080928;
+    border-radius: inherit;
+    box-shadow: inset 0 0 .25em #4c4da3;
+    content: "";
+    height: 33.3%;
+    opacity: .75;
+    cursor: default;
+    pointer-events: none;
+}
+
+#phone-dynamic-island {
+    position: absolute;
+    margin: 0 auto;
+    inset: 0;
+    top: 2rem;
+    width: var(--dynamic-island-default-width);
+    height: var(--dynamic-island-default-height);
+    min-height: var(--dynamic-island-default-height);
+    max-width: 90%;
+    overflow: hidden;
+    background-color: #000;
+    z-index: 999999999;
+    transition: var(--transition-property) all 0.5s;
+    box-shadow: rgb(255 255 255 / 10%) 0px 0px 10px 0px;
+    border-radius: 45px;
+}
+
+#phone-device-buttons figure {
+    position: absolute;
+    left: -10px;
+    width: var(--device-button-width);
+    height: 6rem;
+    top: 100px;
+    background: linear-gradient(90deg, #fff, #2a2a35);
+    border-radius: var(--device-button-radius);
+    cursor: pointer;
+}
+
+#phone-device-buttons .phone-busy-mode {
+    top: 100px;
+    height: 3rem;
+}
+
+#phone-device-buttons .phone-volume-up {
+    top: 150px;
+}
+
+#phone-device-buttons .phone-volume-down {
+    top: 230px;
+}
+
+#phone-device-buttons .phone-lock {
+    top: 130px;
+    right: -10px;
+    left: auto;
+    height: 7rem;
+    cursor: pointer;
+}
+
+#phone-device-screen {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    border-radius: 40px;
+    user-select: none;
+}
+
+.battery-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: .1rem;
+    transition: all .3s;
+}
+
+.battery-container .battery {
+    align-items: center;
+    border: 2px solid var(--battery-border);
+    border-radius: 5px;
+    display: flex;
+    height: 1.4rem;
+    justify-content: flex-start;
+    position: relative;
+    transition: .5s;
+    width: 2.5rem;
+}
+
+.battery-container.home .battery {
+    border: 2px solid hsla(0, 0%, 100%, .5);
+}
+
+.battery-container.low-battery .battery {
+    border: none !important;
+}
+
+.battery-container.low-battery .battery-bar {
+    background-color: #ef4e4e !important;
+}
+
+.battery-container .battery .battery-bar-wrapper {
+    align-items: center;
+    display: flex;
+    height: 80%;
+    margin: .075rem;
+    width: 100%;
+}
+
+.battery-container .battery .battery-bar-wrapper .battery-bar {
+    background-color: var(--text-color);
+    border-radius: 3px;
+    height: 100%;
+    transition: .5s;
+    width: 100%;
+}
+
+.battery-container.home .battery .battery-bar-wrapper .battery-bar {
+    background-color: #fff;
+}
+
+.battery-container .battery-plup {
+    background-color: var(--battery-border);
+    border-bottom-right-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+    height: .4rem;
+    margin-bottom: .025rem;
+    transition: .5s;
+    width: .15rem;
+}
+
+.battery-container.home .battery-plup {
+    background-color: hsla(0, 0%, 100%, .5);
+}
+
+.battery-container .battery-bar[data-charging=true] {
+    background-color: #32d74b !important;
+    animation: charging 5s infinite linear;
+}
+
+@keyframes charging {
+    from {
+        width: var(--battery-percentage);
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+#volume-controller {
+    position: absolute;
+    top: 24%;
+    scale: 0.5;
+    left: -20rem;
+    width: 35%;
+    z-index: 99999999999999999;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: 20% 100%;
+    transition: .5s all;
+}
+
+#volume-controller.active {
+    scale: 1;
+    left: 4.2rem;
+
+}
+
+#volume-controller .control-center-input-icon {
+    height: 5.5rem;
+}
+
+#volume-controller .ios-range {
+    backdrop-filter: blur(30px);
+}

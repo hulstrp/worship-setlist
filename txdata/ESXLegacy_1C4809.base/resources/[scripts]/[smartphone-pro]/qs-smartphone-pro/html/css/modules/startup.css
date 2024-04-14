@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+.startup-screen {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+}
+
+#startup-page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 999999999999;
+    transition: ease all 0.4s;
+    /* background-color: var(--main-background-color); */
+}
+
+#startup-first-screen {
+    top: 0;
+}
+
+#startup-first-screen .logo {
+    position: relative;
+    top: 40%;
+    height: 20%;
+    width: 60%;
+    margin: 0 auto;
+    transition: ease all 0.1s;
+    z-index: 999999999;
+}
+
+#startup-first-screen .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+#startup-first-screen .logo.active {
+    opacity: 1;
+}
+
+#hello-screen {
+    align-items: center;
+    justify-content: center;
+}
+
+#hello-screen span {
+    font-size: 4.7rem;
+    font-family: 'Borel', serif;
+    color: #fff;
+}
+
+.hello-home-button-container .phone-home-button {
+    display: flex !important;
+    background: #fff !important;
+}
+
+#welcome-screen .phone-home-button {
+    display: flex !important;
+    background: var(--text-color) !important;
+}
+
+:is(.welcome-home-button-container, .hello-home-button-container) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    z-index: 999999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+#hello-screen #language-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ios-tick {
+    display: none;
+}
+
+.ios-tick+label {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.ios-tick+label span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 12px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #666;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 28px;
+}
+
+.ios-tick+label span img {
+    opacity: 0;
+    transition: all 0.3s ease;
+    width: 14px;
+    height: 14px;
+}
+
+.ios-tick:checked+label span {
+    background-color: #3498db;
+    box-shadow: none;
+}
+
+.ios-tick:checked+label span img {
+    opacity: 1;
+}
+
+.ios-tick.green:checked+label span {
+    background-color: #2ecc71;
+}
+
+#quickstart-screen header {
+    background: #f1f1f6;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#appearance-screen article,
+#startup-lock-screen article,
+#faceid-screen article,
+#privacy-screen article,
+#quickstart-screen article {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#startup-lock-screen article p {
+    margin-bottom: 30px;
+}
+
+#startup-lock-screen article h2,
+#faceid-screen article h2,
+#privacy-screen article h2 {
+    margin-bottom: 20px;
+}
+
+#appearance-screen header,
+#startup-lock-screen header,
+#faceid-screen header,
+#privacy-screen header {
+    font-size: 17px;
+    width: 95%;
+    position: relative;
+    bottom: 15px;
+    margin: 0 auto;
+}
+
+#appearance-screen button,
+#privacy-screen button, 
+#faceid-screen button {
+    background: #1e7ee5;
+    color: var(--invert-text-color) !important;
+} 

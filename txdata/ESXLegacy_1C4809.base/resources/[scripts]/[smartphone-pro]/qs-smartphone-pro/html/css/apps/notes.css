@@ -1,0 +1,249 @@
+.notes-app {
+  background: var(--main-background-color-notes);
+}
+
+.paylas {
+  position: relative;
+  top: 20px;
+  height: auto;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.paylas input[type='text'] {
+  position: relative;
+  margin: 0 auto;
+  width: 97%;
+  left: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.paylas #gnc_tarea {
+  position: relative;
+  bottom: 10px;
+  font-size: 16px;
+  height: 670px;
+  margin-bottom: 5px;
+  background: transparent;
+  color: gray;
+}
+
+.paylas #tarea {
+  position: relative;
+  bottom: 10px;
+  font-size: 16px;
+  height: 670px;
+  margin-bottom: 5px;
+  background: transparent;
+  color: gray;
+}
+
+.paylas a {
+  position: relative;
+  color: orange;
+  left: 92%;
+  font-size: 15px;
+}
+
+.notes-search {
+  position: relative;
+  top: 10px;
+  background: var(--main-superficial-color) !important;
+}
+
+.notes-list {
+  position: relative;
+  top: 30px;
+  height: auto;
+  max-height: 70.5%;
+  width: 94%;
+  margin: 0 auto;
+  overflow: auto;
+  border-radius: 12px;
+}
+
+.notes-app footer {
+  position: absolute;
+  top: 93%;
+  width: 90%;
+  left: 20px;
+  text-align: center;
+}
+
+.notes-app footer i {
+  font-size: 20px;
+  color: orange;
+}
+
+#title_ {
+  position: absolute;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-left: 16px;
+  font-weight: bold;
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-description {
+  position: relative;
+  top: 30px;
+  left: 15px;
+  font-size: 15px;
+  color: gray;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.notes-app textarea {
+  background: #f4f4f4;
+  width: -webkit-fill-available;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  font-size: 12px;
+  border: none;
+  font-weight: 100;
+  height: 200px;
+  resize: none;
+}
+
+.note-amount {
+  color: gray;
+}
+
+.p {
+  display: none;
+}
+
+.gstr {
+  display: none;
+}
+
+.gstr .n-header {
+  width: 95%;
+}
+
+.gstr .n-header .fa-save {
+  position: relative;
+  font-size: 21px;
+  right: 10px;
+}
+
+.gstr .n-header a {
+  font-size: 17px;
+  color: orange;
+}
+
+.n-p .n-header {
+  width: 95%;
+}
+
+.n-p .n-header .fa-save {
+  position: relative;
+  font-size: 21px;
+  right: 10px;
+}
+
+.n-p .n-header a {
+  font-size: 17px;
+  color: orange;
+}
+
+.nn {
+  height: 60px;
+  background: var(--main-superficial-color);
+}
+
+.n-header a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 29px;
+  font-weight: bold;
+  left: 5px;
+}
+
+.n-header {
+  width: -webkit-fill-available;
+  background: white;
+  padding-top: 70px;
+  width: 94%;
+  margin: 0 auto;
+  background: var(--main-background-color-notes);
+}
+
+.notes-widget {
+  background: white;
+}
+
+.notes-widget header {
+  position: relative;
+  background: linear-gradient(to top, #fcbf01, #fed600);
+  border-bottom: 1px solid #cea322;
+  width: 175px;
+  height: 40px;
+  bottom: 12px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 40px;
+  color: white;
+}
+
+.contenido .notes-widget header {
+  height: 43px;
+  width: 190px;
+  line-height: 43px;
+}
+
+.notes-widget header::before {
+  content: "\00a0";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-image: repeating-linear-gradient(to right, lightgray, lightgray 3px, transparent 3px, transparent 6px);
+}
+
+#notes-widget-header a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#notes-widget-header i {
+  font-size: 15px;
+}
+
+.notes-widget-list {
+  height: 65%;
+}
+
+.contenido .notes-widget-list {
+  position: relative;
+  top: 10px;
+  height: 60%;
+}
+
+.notes-widget-list article {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 5px;
+}
+
+.notes-widget-list article:last-child {
+  border-bottom: none;
+}
+
+.notes-widget-list article a {
+  color: black;
+}
+
+.notes-widget-list article p {
+  color: gray;
+}

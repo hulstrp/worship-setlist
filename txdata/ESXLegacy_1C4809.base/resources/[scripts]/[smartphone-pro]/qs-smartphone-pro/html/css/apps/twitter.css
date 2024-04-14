@@ -1,0 +1,603 @@
+#twitter-edit-profile form input {
+  height: 30px;
+}
+
+#twitter-edit-profile button {
+  height: 45px;
+  margin-bottom: 15px;
+  border-radius: 20px
+}
+
+#twitter-edit-profile,
+#twitter-profile-page,
+#twitter-create-message-container,
+#twitter-messages-page,
+#twitter-notifications-page,
+#twitter-search-page,
+.twitter-app {
+  background: var(--twitter-background-container);
+}
+
+#twitter-chat {
+  height: 112%;
+  background: var(--twitter-background-container);
+}
+
+#twitter-chat .emojionearea {
+  height: 40px;
+  font-size: 16px;
+  padding-bottom: 2px;
+  border: 1px solid gray !important;
+  background: var(--twitter-background-container) !important;
+}
+
+#twitter-chat .emojionearea-editor {
+  position: relative;
+  font-size: 16px;
+  color: var(--text-color) !important;
+}
+
+#twitter-profile-verify {
+  position: relative;
+  top: 9px;
+  right: 5px;
+}
+
+#twitter-opened-tweet {
+  background: var(--twitter-background-container);
+}
+
+#twitter-opened-tweet .emojionearea {
+  border: 1px solid gray !important;
+  background: var(--twitter-background-container) !important;
+}
+
+#twitter-opened-tweet .emojionearea-editor {
+  color: var(--text-color) !important;
+}
+
+#twitter-profile-page .fa-arrow-left {
+  color: var(--invert-text-color);
+  background: var(--dark-border-color);
+}
+
+#twitter-profile-page header {
+  position: relative;
+  width: 97%;
+  left: 6px;
+  margin-bottom: 15px;
+}
+
+
+#twitter-profile-username {
+  position: relative;
+  top: 7px;
+  left: -8px;
+}
+
+#twitter-profile-page #twitter-profile-name {
+  position: relative;
+  top: 10px;
+  left: -7px;
+}
+
+#twitter-profile-edit-btn {
+  color: white;
+  font-weight: bold;
+  background: var(--blue-text);
+  border: none;
+}
+
+#twitter-create-tweet-page img {
+  width: 93%;
+  border-radius: 10px;
+}
+
+#twitter-create-tweet-page {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: var(--twitter-background-container);
+}
+
+#twitter-create-tweet-page .fa-times {
+  right: 36px;
+  top: 10px;
+  color: gray;
+}
+
+#twitter-register-screen,
+#twitter-forgot-password-screen,
+#twitter-register-screen-fourth,
+#twitter-register-screen-third,
+#twitter-register-screen-second,
+#twitter-login-screen,
+#twitter-register-screen-first,
+#twitter-register-firstscreen {
+  width: 97%;
+  left: 7px;
+  background: var(--twitter-background-container);
+}
+
+#twitter-login-screen {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#twitter-login-screen button {
+  width: 94%;
+}
+
+#twitter-register-screen-first p {
+  position: relative;
+  top: 20px;
+}
+
+#twitter-register-firstscreen h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+#twitter-home-page {
+  background: var(--twitter-background-container);
+}
+
+.twitter-white-btn {
+  width: 98%;
+  height: 6rem;
+  border-radius: 22px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+  color: var(--main-background-color);
+}
+
+#twitter-forgot-password-accounts article {
+  height: 60px;
+}
+
+.twitter-blue-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 22px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0095f6;
+  color: #fff;
+}
+
+.twitter-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.twitter-form input {
+  background-color: var(--common-input-background) !important;
+  border: none;
+  outline: none;
+  height: 45px;
+  padding: 10px;
+  color: #0095f6;
+  border-radius: 7px;
+}
+
+.twitter-screen {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+
+.twitter-register-screen-header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.twitter-header {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  padding-top: 5.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--dark-border-color);
+  margin-bottom: 12px;
+  background-color: var(--twitter-background-container);
+}
+
+.twitter-header .twitter-avatar {
+  position: absolute;
+  left: 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+.twitter-header .twitter-logo {
+  margin: 0px auto;
+  align-self: center;
+}
+
+.twitter-header-button.current,
+.twitter-profile-divider-button.current {
+  color: var(--text-color);
+}
+
+.twitter-header-button._active {
+  border-bottom: 3px solid #0095f6;
+  color: var(--text-color);
+}
+
+#twitter-header-divider,
+#twitter-profile-divider {
+  position: absolute;
+  height: 3px;
+  background-color: #0095f6;
+  bottom: 0px;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 4px;
+}
+
+#twitter-tweets .hide-border-last {
+  border-bottom: 1px solid var(--dark-border-color);
+  margin-bottom: 5px;
+}
+
+#twitter-tweets .hide-border-last:last-child {
+  border-bottom: none;
+}
+
+#twitter-home-page #twitter-tweets header,
+#twitter-profile-page #profile-tweets header {
+  width: 91%;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#twitter-home-page #twitter-tweets img,
+#twitter-profile-page #profile-tweets img,
+#twitter-profile-page #twitter-tweets img {
+  width: 90%;
+  object-fit: cover;
+}
+
+#twitter-home-page #twitter-tweets .rounded-full,
+#twitter-profile-page #profile-tweets .rounded-full,
+#twitter-profile-page #twitter-tweets .rounded-full {
+  height: 33px;
+  width: 33px;
+  object-fit: cover;
+}
+
+#twitter-home-page #twitter-tweets,
+#twitter-profile-page #profile-tweets,
+#twitter-profile-page #twitter-tweets {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#twitter-home-page #twitter-tweets .justify-around,
+#twitter-profile-page #profile-tweets .justify-around,
+#twitter-profile-page #twitter-tweets .justify-around {
+  position: relative;
+  right: 33px;
+  margin: 0 auto;
+}
+
+#twitter-profile-page #profile-tweets p,
+#twitter-profile-page #twitter-tweets p {
+  width: 87%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 10px;
+  margin-bottom: 5px;
+}
+
+#twitter-profile-page #profile-tweets .tweet-posted p {
+  margin-left: 5px;
+}
+
+.tweet-posted {
+  margin-left: 5px;
+}
+
+#twitter-footer {
+  border-top: 1px solid var(--dark-border-color);
+}
+
+.twitter-footer-icon {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.twitter-footer-icon.current {
+  color: var(--blue-text);
+}
+
+#twitter-search-input {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: -35px;
+  border-radius: 22px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--weazel-post-input);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0px 20px;
+}
+
+#twitter-search-results article {
+  padding: 10px;
+  border-bottom: 1px solid var(--dark-border-color)
+}
+
+#twitter-search-results article:last-child {
+  border-bottom: none;
+}
+
+.twitter-border-btn {
+  border-radius: 16px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #141414;
+  outline: none;
+  padding: 8px 20px;
+}
+
+.twitter-follow-btn {
+  border-radius: 16px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+  padding: 10px 24px;
+}
+
+.twitter-avatar {
+  cursor: pointer;
+}
+
+/* check if not exist emojionearea-standalone */
+
+.twitter-app .emojionearea {
+  margin: 0 auto;
+  background: transparent !important;
+  color: #fff !important;
+  width: 90% !important;
+  background: #141414 !important;
+  border: none !important;
+}
+
+.twitter-app .emojionearea-editor {
+  color: #fff !important;
+  width: 80% !important;
+}
+
+.twitter-app .emojionearea-editor::placeholder {
+  color: #fff !important;
+}
+
+.twitter-chat-message {
+  max-width: 85%;
+  gap: 4px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--twitter-dark-chat);
+  border-radius: 20px;
+  padding: 12px;
+  align-self: flex-start;
+}
+
+.twitter-chat-message.self {
+  align-self: flex-end;
+  background-color: #0095f6;
+}
+
+.twitter-chat-input::placeholder {
+  color: #ccc;
+}
+
+#twitter-profile-follow-btn.following {
+  background-color: #0095f6;
+  color: white;
+  font-weight: bold;
+}
+
+#twitter-profile-follow-btn {
+  background-color: #0095f6;
+  color: white;
+  font-weight: bold;
+}
+
+:where(.fas, .fa, .far) {
+  cursor: pointer;
+}
+
+#twitter-opened-tweet-like.fas {
+  color: #f56565;
+}
+
+#twitter-opened-tweet-retweet.fas {
+  color: #48bb78;
+}
+
+#twitter-create-tweet-input {
+  display: block;
+  width: 90%;
+  height: auto;
+  border: none;
+  overflow: hidden;
+  margin-left: 7px;
+  resize: none;
+}
+
+#twitter-create-tweet-emoji {
+  width: auto;
+}
+
+#twitter-create-tweet-actions .emojionearea {
+  width: auto !important;
+  margin: 0px !important;
+  background: transparent !important;
+  color: unset !important;
+}
+
+#twitter-create-tweet-actions .emojionearea-editor {
+  width: auto !important;
+  background: transparent !important;
+  color: unset !important;
+  padding: unset !important;
+  display: none;
+}
+
+#twitter-create-tweet-actions .emojionearea-button-open {
+  display: none;
+}
+
+#twitter-create-tweet-actions .emojionearea-button-close {
+  display: none;
+}
+
+#twitter-creat-tweet-media {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#twitter-create-tweet-media.customHidden {
+  scale: 1.2;
+  opacity: 0;
+}
+
+#twitter-chat-messages {
+  height: 76%;
+}
+
+
+#twitter-messages-list article {
+  padding: 10px;
+  border-bottom: 1px solid var(--dark-border-color)
+}
+
+#twitter-messages-list article:last-child {
+  border-bottom: none;
+}
+
+#twitter-messages-list p,
+#twitter-messages-list a {
+  position: relative;
+  top: 3px;
+  left: 5px;
+  font-size: 16px;
+}
+
+.tw-message-name {
+  font-weight: bold;
+  font-size: 16px !important;
+  margin-right: 7px;
+}
+
+#twitter-messages-list span {
+  position: relative;
+  top: 3px;
+  font-size: 13px;
+}
+
+#twitter-create-message-users article {
+  padding: 10px;
+}
+
+.twitter-header .fa-trash-alt {
+  font-size: 22px;
+}
+
+.tw-change-name,
+.tw-change-user,
+.tw-change-bio,
+.tw-change-password {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#twitter-opened-tweet-comments {
+  padding-top: 15px;
+  border-top: 1px solid var(--dark-border-color);
+  padding-top: 25px;
+}
+
+#twitter-opened-tweet-comments header {
+  font-weight: bold;
+}
+
+#twitter-opened-tweet-comments .border-b:last-child {
+  border-bottom: none
+}
+
+#twitter-opened-tweet .h-75 {
+  height: 80%;
+}
+
+#twitter-opened-tweet .footer-posts {
+  background: transparent;
+}
+
+#twitter-create-tweet-page .tw-tweet {
+  color: white;
+}
+
+#twitter-opened-tweet .pt-8 .tw-tweet {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+#twitter-create-tweet-page .twitter-avatar {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+}
+
+#twitter-opened-tweet .emojionearea {
+  height: 40px;
+  font-size: 16px;
+  padding-bottom: 2px;
+  border: 1px solid gray !important;
+  background: var(--twitter-background-container) !important;
+}
+
+#twitter-opened-tweet .emojionearea-editor {
+  position: relative;
+  font-size: 16px;
+  color: var(--text-color) !important;
+}
+
+#twitter-notifications-content header img {
+  position: relative;
+  top: 3px;
+}

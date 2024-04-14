@@ -1,0 +1,433 @@
+:root {
+    --transition-property: ease-in-out
+}
+
+#phone-dynamic-island:not(.active) :not(#phone-camera) {
+    scale: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: .2s all;
+}
+
+.phone-notification-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: var(--transition-property) all 0.4s;
+    gap: 15px;
+}
+
+.phone-notification-container .notification-title {
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.phone-notification-container.showing {
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.phone-lockscreen-island.showing {
+    width: 100%;
+    padding-top: 2.1rem;
+    padding-bottom: 1.5rem;
+}
+
+#phone-dynamic-island.active {
+    max-width: 90%;
+    width: 90%;
+    padding: 4px;
+    scale: 1;
+}
+
+#phone-dynamic-island.removing {
+    width: var(--dynamic-island-default-width);
+    height: var(--dynamic-island-default-height);
+}
+
+.phone-dynamic-island-child {
+    width: 0;
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.phone-dynamic-island-child:not(.showing) {
+    padding: 0px !important;
+}
+
+.phone-dynamic-island-child.showing {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-in-out;
+}
+
+.phone-currentcall-action-btn {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    background-color: #ff2a1b;
+    color: #fff;
+}
+
+#phone-dynamic-island:has(.phone-airplane-mode-island.showing) {
+    width: 80%;
+    height: var(--dynamic-island-default-height);
+    padding: 0px;
+}
+
+#phone-dynamic-island:has(.phone-airplane-mode-disabled-island.showing) {
+    width: 80%;
+    height: var(--dynamic-island-default-height);
+    padding: 0px;
+}
+
+.silence-mode-bell {
+    background: orangered;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    padding-left: 18px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+#phone-airplane-mode-island {
+    font-size: 15px;
+}
+
+.phone-airplane-mode-disabled-island a {
+    color: white;
+    margin-right: 5px;
+}
+
+.phone-airplane-mode-disabled-island .silence-mode-bell {
+    background: transparent;
+    font-size: 18px;
+}
+
+#phone-dynamic-island:has(.phone-low-battery-island.showing) {
+    width: 82%;
+    height: var(--dynamic-island-default-height);
+    padding: 0px;
+}
+
+#phone-dynamic-island:has(.phone-spotify-island.showing, .phone-lockscreen-island.showing) {
+    width: 47%;
+    height: var(--dynamic-island-default-height);
+    padding: 0px;
+}
+
+#phone-dynamic-island:has(.phone-currentcall-container.showing) {
+    height: var(--dynamic-island-default-height);
+    width: var(--dynamic-island-signals-width);
+    padding: 0.2rem 0px;
+}
+
+#phone-dynamic-island:has(#phone-currentcall-outgoing.active) {
+    height: 5%;
+    width: 80%;
+    padding: 0.5rem 0px;
+}
+
+#phone-dynamic-island:has(#phone-currentcall-incoming.active) {
+    height: 5%;
+    width: 80%;
+    padding: 0.3rem 0px;
+}
+
+.phone-currentcall-container.showing:has(#phone-currentcall-ongoing.active) {
+    width: 100%;
+    padding: 0.7rem 1rem 3rem 1rem;
+}
+
+
+.phone-currentcall-container.showing:not(:has(#phone-currentcall-ongoing.active)) {
+    width: 100%;
+    padding: 0.1rem 1rem 3rem 1rem;
+}
+
+#phone-dynamic-island:has(.phone-currentcall-container.showing) #phone-currentcall-ongoing-informations {
+    opacity: 1;
+    visibility: 1;
+    width: 100%;
+    height: auto;
+    transition: width .05s, height .3s, opacity .3s ease-in-out;
+}
+
+#phone-dynamic-island:has(.phone-currentcall-container.active) #phone-currentcall-ongoing-informations {
+    opacity: 0;
+    visibility: 0;
+    width: 0;
+    height: 0;
+    transition: none;
+}
+
+#phone-dynamic-island:has(.phone-currentcall-container.showing) #phone-currentcall-ongoing-interactions {
+    opacity: 0;
+    visibility: 0;
+    width: 0;
+    height: 0;
+    transition: none;
+}
+
+#phone-dynamic-island:has(.phone-currentcall-container.active) #phone-currentcall-ongoing-interactions {
+    opacity: 1;
+    visibility: 1;
+    width: 100%;
+    height: auto;
+    transition: all .4s ease-in-out;
+}
+
+#phone-dynamic-island:not(:has(#phone-currentcall-incoming.hide)) {
+    height: 9%;
+    width: 100%;
+    padding: 1rem;
+}
+
+#phone-dynamic-island.active:has(.phone-spotify-island.active) {
+    width: 90%;
+    height: 24%;
+}
+
+#phone-dynamic-island.active:has(.phone-notification-container.showing) {
+    width: 90%;
+    height: 15%;
+}
+
+#phone-dynamic-island.active:has(.facetime-current-call-interactions.showing) {
+    width: 90%;
+    padding: 12px;
+    height: fit-content;
+    transition: height .6s, width .3s;
+}
+
+#phone-dynamic-island.active:has(.phone-currentcall-container.active) {
+    width: 85%;
+    height: 15.7%;
+}
+
+.phone-currentcall-container.active {
+    width: 100%;
+    /* fix for height animation */
+    padding: 3rem 1rem 1rem 1rem !important;
+    gap: 16px;
+}
+
+.phone-spotify-island.showing {
+    width: 100%;
+    padding: 0;
+}
+
+:where(.phone-spotify-island, .phone-lockscreen-island, .phone-notification-container) * {
+    transition: var(--transition-property) all 0.4s;
+}
+
+.phone-spotify-island :is(#phone-spotify-island-informations, footer) {
+    opacity: 0;
+    scale: 0;
+    width: 0px;
+    height: 0px;
+    transition: none;
+}
+
+.phone-spotify-island.active :is(#phone-spotify-island-informations, footer) {
+    opacity: 1;
+    scale: 1;
+    width: 100%;
+    height: auto;
+    transition: .4s ease-in-out;
+}
+
+.phone-spotify-island.active {
+    width: 100%;
+    /* fix for height animation */
+    padding: 5rem 3rem 3rem 3rem;
+    gap: 16px;
+}
+
+.phone-spotify-island.active img {
+    width: 50px;
+    height: 50px;
+}
+
+.phone-spotify-island .slider {
+    width: 70% !important;
+    margin: 0 auto;
+}
+
+.phone-spotify-island span {
+    font-size: 12px !important;
+    position: unset !important;
+    padding: 6px;
+}
+
+.phone-currentcall-title {
+    font-size: 12px;
+    color: white;
+}
+
+.phone-currentcall-contact {
+    margin-top: 2px;
+    font-size: 10px;
+    color: #fff
+}
+
+.phone-currentcall-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.phone-currentcall-cancel {
+    color: #fff;
+    padding: 4px 22px;
+    background-color: #ff2a1b;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.phone-fast-call-button {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.phone-fast-call-button.ongoing {
+    width: 76px;
+    height: 76px;
+}
+
+.phone-fast-call-button i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.phone-fast-call-button.ongoing i {
+    font-size: 25px;
+    color: #fff;
+}
+
+.phone-fast-call-button[data-type='microphone'].active {
+    background: #ff2a1b;
+}
+
+.phone-fast-call-button[data-type='speaker'].active {
+    background: #3cb7e7;
+}
+
+.phone-fast-call-button[data-type='video'].active {
+    /* give me a good color orange */
+    background-color: orange
+}
+
+.phone-fast-call-button[data-type='video'].waiting {
+    animation: pulse 2s infinite;
+}
+
+.phone-fast-call-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.audio-icon {
+    width: 20px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.phone-spotify-island.active .audio-icon {
+    width: 26px;
+    height: 24px;
+}
+
+.phone-spotify-island .track {
+     width: 210px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+}
+
+.audio-icon .audio-icon-nib {
+    width: 7.2px;
+    background: #fff;
+    margin-right: 2px;
+    border-radius: 3px;
+}
+
+.audio-icon .audio-icon-nib:nth-child(even) {
+    height: 100%;
+}
+
+.audio-icon .audio-icon-nib:nth-child(odd) {
+    height: 40%;
+}
+
+.audio-icon.is-active .audio-icon-nib:nth-child(even) {
+    animation: 0.4s ease-in-out 0.15s infinite alternate pulseDownUp;
+}
+
+.audio-icon.is-active .audio-icon-nib:nth-child(odd) {
+    animation: 0.4s ease-in-out 0.25s infinite alternate pulseUpDown;
+}
+
+.audio-icon.is-active .audio-icon-nib:nth-child(3) {
+    animation: 0.4s ease-in-out 0.15s infinite alternate pulseUpDownFar;
+}
+
+@keyframes pulseUpDown {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(2);
+    }
+}
+
+@keyframes pulseUpDownFar {
+    from {
+        transform: scaleY(1.8);
+    }
+
+    to {
+        transform: scaleY(2.8);
+    }
+}
+
+@keyframes pulseDownUp {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0.8);
+    }
+}
+
+.audio-icon+.audio-icon,
+.audio-icon+button {
+    margin-left: 36px;
+}
+
+#phone-currentcall-incoming img {
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+#phone-currentcall-caller a {
+    font-size: 15px;
+}

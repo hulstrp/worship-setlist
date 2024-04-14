@@ -1,0 +1,37 @@
+.map-app {
+    background-color: #143c6a;
+}
+
+#phone-map {
+    height: 100%;
+    width: 100%;
+    background-color: #143c6a;
+}
+
+.leaflet-top {
+    top: 7% !important;
+}
+
+.map-widget {
+    padding: 0 !important;
+}
+
+.map-widget-map {
+    pointer-events: none;
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+#phone-input-title {
+    text-align: center;
+    width: 90%;
+    line-height: 25px;
+}
+
+#phone-input-subtitle {
+    text-align: center;
+    width: 90%;
+    margin-bottom: 5px;
+}

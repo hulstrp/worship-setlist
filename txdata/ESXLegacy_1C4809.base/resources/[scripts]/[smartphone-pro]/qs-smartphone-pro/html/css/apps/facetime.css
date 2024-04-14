@@ -1,0 +1,154 @@
+.facetime-screen {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background-color)
+}
+
+#facetime-contact-list {
+    position: absolute;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    top: 30px;
+    width: 90%;
+    /* margin: 0 auto; */
+    height: auto;
+    overflow-y: auto;
+    display: flex;
+}
+
+.facetime-contact {
+    width: 100%;
+    margin-left: 18px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    background-color: var(--container-dark-background-color);
+    color: #48bb78;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transition: all 0.4s;
+}
+
+.facetime-contact:hover {
+    background-color: #48bb78;
+    color: #ccc;
+    border-radius: 5px;
+}
+
+.facetime-contact img {
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.facetime-contact a {
+    margin-left: 5px;
+}
+
+.facetime-fast-call-button {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.facetime-fast-call-button.ongoing {
+    width: 54px;
+    height: 54px;
+}
+
+.facetime-fast-call-button i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.facetime-fast-call-button.ongoing i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.facetime-fast-call-button[data-type='microphone'].active {
+    background: #ff2a1b;
+}
+
+.facetime-fast-call-button[data-type='speaker'].active {
+    background: #3cb7e7;
+}
+
+.facetime-fast-call-button[data-type='video'].active {
+    background-color: #fff
+}
+
+.facetime-fast-call-button[data-type='video'].active i {
+    color: #000;
+}
+
+.facetime-fast-call-button[data-type='video'].waiting {
+    animation: pulse 2s infinite;
+}
+
+.facetime-fast-call-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#facetime-current-call-page {
+    transform: translateY(-100%);
+}
+
+#facetime-current-call-page.active {
+    transform: translateY(0%);
+}
+
+#face-time-icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: end;
+    height: 3rem;
+    border-radius: 20px;
+    background-color: #48bb78;
+    transform: scale(0);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 1.8em;
+    cursor: pointer;
+    transition: ease all 0.2s;
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    z-index: 99999999999999999;
+}
+
+#face-time-icon i {
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+#face-time-icon.active {
+    transform: scale(1);
+    transition: ease all 0.2s;
+}
+
+#phone-device-screen:has(#face-time-icon.active) #phone-time {
+    scale: 0;
+    opacity: 0;
+}

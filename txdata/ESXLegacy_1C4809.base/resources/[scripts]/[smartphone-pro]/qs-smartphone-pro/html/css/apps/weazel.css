@@ -1,0 +1,451 @@
+#weazel-app-news-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#weazel-app-edit-news,
+#weazel-app-create-news {
+  background: var(--weazel-post-creator) !important;
+}
+
+.weazel-app {
+  background: var(--weazel-background);
+}
+
+#weazel-app-create-news #weazel-app-header {
+  width: 93%;
+}
+
+#weazel-app-create-news #weazel-app-header p {
+  font-size: 17px;
+  color: #eb445e !important;
+  cursor: pointer;
+  bottom: 10px;
+  position: relative;
+}
+
+#weazel-app-create-news #weazel-app-header a {
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--text-color) !important;
+}
+
+.weazel-create-container {
+  height: auto;
+  position: relative;
+  top: 20px;
+}
+
+.weazel-create-container input {
+  background: var(--weazel-post-input);
+  height: 40px;
+  margin-bottom: 15px;
+  position: relative;
+  top: 20px;
+  width: 90%;
+  left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.weazel-create-container textarea {
+  background: var(--weazel-post-input);
+  height: 153%;
+  margin-bottom: 15px;
+  position: relative;
+  top: 20px;
+  width: 90%;
+  left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.weazel-imageMain {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.weazel-create-container button {
+  background: #eb445e !important;
+  height: 50px !important;
+  position: relative;
+  margin-top: 9%;
+  width: 90% !important;
+  border-radius: 6px !important;
+  left: 20px;
+}
+
+#weazel-app-edit-news #weazel-app-header {
+  width: 93%;
+}
+
+#weazel-app-edit-news #weazel-app-header p {
+  font-size: 17px;
+  color: #eb445e !important;
+  cursor: pointer;
+  bottom: 10px;
+  position: relative;
+}
+
+#weazel-app-edit-news #weazel-app-header a {
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--text-color) !important;
+}
+
+#weazel-app-edit-news textarea {
+  background: var(--weazel-post-input);
+  height: 110%;
+  margin-bottom: 15px;
+  position: relative;
+  top: 20px;
+  width: 90%;
+  left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#weazel-app-edit-news button {
+  background: #eb445e !important;
+  height: 50px !important;
+  position: relative;
+  margin-top: 6%;
+  width: 90% !important;
+  border-radius: 6px !important;
+  left: 20px;
+}
+
+#weazel-app-news-container #weazel-app-header {
+  height: 10%;
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#weazel-app-news-container #weazel-app-header a,
+#weazel-app-header p {
+  width: 100%;
+  text-align: left;
+}
+
+#weazel-app-news-container #weazel-app-header a {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+#weazel-app-news-container #weazel-app-header a i {
+  margin-right: 5px;
+}
+
+#weazel-app-news-container #weazel-app-header p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: var(--text-color) !important;
+}
+
+#createWeazel {
+  position: relative;
+  bottom: 70px;
+  background: var(--border-light-color);
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#weazel-header-line {
+  position: relative;
+  bottom: 5px;
+  height: 1px;
+  background: var(--border-light-color);
+}
+
+#weazel-app-news-container article {
+  position: relative;
+  top: 25px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+#weazel-app-news-container article h1 {
+  color: #eb445e;
+  font-size: 20px;
+  position: relative;
+  bottom: 8px;
+}
+
+#weazel-app-create-news,
+#weazel-app-edit-news {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  display: none;
+  z-index: 4;
+  background: #fff;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#weazel-app-news {
+  position: relative;
+  top: 25px;
+  height: 75%;
+  padding-bottom: 5px;
+  overflow: auto;
+}
+
+#weazel-app-create-news button,
+#weazel-app-edit-news button {
+  width: calc(100% - 74px);
+  height: 33px;
+  border: none;
+  background-color: #b93160;
+  color: white;
+  border-radius: 2px;
+}
+
+#weazel-app-create-news input,
+#weazel-app-edit-news input {
+  border: none;
+}
+
+#weazel-app-create-news textarea,
+#weazel-app-edit-news textarea {
+  border: none;
+  resize: none;
+  margin-right: 15px;
+}
+
+#weazel-app-news::-webkit-scrollbar {
+  display: none;
+}
+
+#weazel-imageContainer {
+  width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#weazel-imageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.news {
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.05) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.05) 0px 3px 7px -3px;
+  margin-bottom: 20px;
+  background: var(--weazel-boxes);
+}
+
+.large-news {
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.small-news {
+  position: flex;
+  width: 44%;
+  margin: 0 auto;
+  float: left;
+  margin-left: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.news img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.news div {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.news div p {
+  overflow: hidden;
+  max-width: 100%;
+  padding: 0 15px;
+  font-size: 15px;
+  color: gray;
+}
+
+.news h3 {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 15px;
+  color: var(--text-color);
+}
+
+.small-news img {
+  height: 20% !important;
+}
+
+.small-news div p {
+  font-size: 12px;
+  color: gray;
+}
+
+.small-news h3 {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.widget-selected {
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.weazel-widget {
+  background: var(--calendar-widget);
+}
+
+.phone-applications #weazel-widget-header {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.phone-applications #weazel-widget-header h7 {
+  color: #eb445e;
+  position: relative;
+  top: 3px;
+  font-size: 15px;
+}
+
+.phone-applications .weazel-widget-last {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  height: 33px;
+  justify-content: space-between;
+}
+
+.phone-applications .weazel-widget-last:last-child {
+  border: none;
+}
+
+.phone-applications .weazel-widget-last img {
+  height: 35px;
+  width: 35px;
+  border-radius: 6px;
+}
+
+.phone-applications .weazel-widget-last a {
+  font-size: 13px;
+  color: var(--text-color);
+  height: 35px;
+  width: 67%;
+  margin-left: 5px;
+  overflow: hidden;
+}
+
+.phone-applications #weazel-widget-header img {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  top: 0;
+  float: right;
+}
+
+.contenido #weazel-widget-header {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contenido #weazel-widget-header h7 {
+  color: #eb445e;
+  position: relative;
+  top: 3px;
+  font-size: 15px;
+}
+
+.contenido .weazel-widget-last {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  top: 32px;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  height: 33px;
+  justify-content: space-between;
+}
+
+.contenido .weazel-widget-last:last-child {
+  border: none;
+}
+
+.contenido .weazel-widget-last img {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+}
+
+.contenido .weazel-widget-last a {
+  font-size: 14px;
+  color: var(--text-color);
+  height: 35px;
+  width: 67%;
+  margin-left: 5px;
+  overflow: hidden;
+}
+
+.contenido #weazel-widget-header img {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  top: 0;
+  float: right;
+}
+
+#widget-customize-list #weazel-widget-header img {
+  display: none;
+}
+
+#widget-customize-list .weazel-widget-last {
+  border: none;
+}
+
+#lock-screen-widgets .weazel-widget-last img,
+#widget-customize-list .weazel-widget-last img {
+  display: none;
+}
+
+#lock-screen-widgets .weazel-widget-last,
+#widget-customize-list .weazel-widget-last {
+  position: relative;
+  top: 10px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
