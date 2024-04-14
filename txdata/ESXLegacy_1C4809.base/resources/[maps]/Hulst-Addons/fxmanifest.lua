@@ -1,10 +1,3 @@
-shared_script '@WaveShield/resource/waveshield.lua' --this line was automatically written by WaveShield
-
-shared_script '@frp-manualapi/ai_module_fg-obfuscated.lua'
- 
- 
- 
-
 fx_version 'adamant'
 game 'gta5'
 this_is_a_map 'yes'

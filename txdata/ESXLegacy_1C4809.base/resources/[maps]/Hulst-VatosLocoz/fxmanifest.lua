@@ -1,10 +1,3 @@
-shared_script '@STILLEAC/shared_fg-obfuscated.lua'
-shared_script '@STILLEAC/ai_module_fg-obfuscated.lua'
-shared_script '@vr-huisinbraak/shared_fg-obfuscated.lua'
-shared_script '@antisteeldienst/shared_fg-obfuscated.lua'
-
-
-
 shared_script "@sac/sentic_init.lua"
 
 fx_version "bodacious"
