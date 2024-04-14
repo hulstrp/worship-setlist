@@ -12,7 +12,7 @@ shared_scripts {
 	'config.lua',
 	'config.weapons.lua',
 }
-.
+
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
 	'config.logs.lua',
