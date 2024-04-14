@@ -82,11 +82,21 @@ ensure [core]
 ensure [standalone]
 ensure [esx_addons]
 ensure [depencies]
-ensure [smartphone-pro]
 ensure [scripts]
+ensure [maps]
 ensure [voertuigen]
-
-
+ensure [smartphone-pro]
+ensure cfx-gabz-townhall
+ensure cfx-gabz-pdprops
+ensure cfx-gabz-247
+ensure cfx-gabz-barber
+ensure cfx-gabz-ponsonbys
+ensure cfx-gabz-suburban
+ensure cfx-gabz-fleeca
+ensure cfx-gabz-paletobank
+ensure cfx-gabz-binco
+ensure cfx-gabz-pacificbank
+ensure [kleding]
 
 # Additional Resource
 # -------------------
