@@ -68,7 +68,7 @@ Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx' -- You can change
         'none'
 ]]
 
-Config.UseTarget = 'none'     -- 'ox_target', 'qb-target' or 'none'
+Config.UseTarget = 'ox_target'     -- 'ox_target', 'qb-target' or 'none'
 Config.QBCoreDrawText = false -- Set true/false (you need exports['qb-core']:DrawText(...))
 
 --[[

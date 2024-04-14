@@ -57,12 +57,14 @@ function ESX.Progressbar(message, length, Options)
     print("[^1ERROR^7] ^5ESX Progressbar^7 is Missing!")
 end
 
-function ESX.ShowNotification(message, notifyType, length)
-    if GetResourceState("esx_notify") ~= "missing" then
-        return exports["esx_notify"]:Notify(notifyType, length, message)
+function ESX.ShowNotification(message, type, length)
+    if type == 'error' then
+        exports['okokNotify']:Alert("Error", message, length, 'error')
+    elseif type == 'inform' then
+        exports['okokNotify']:Alert("Info", message, length, 'info')
+    elseif type == 'success' then
+        exports['okokNotify']:Alert("Success", message, length, 'success')
     end
-
-    print("[^1ERROR^7] ^5ESX Notify^7 is Missing!")
 end
 
 function ESX.TextUI(message, notifyType)
