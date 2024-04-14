@@ -1,0 +1,9 @@
+
+================================================================
+======== txAdmin v7.1.0 atop fxserver 7900 Starting - 14-4-2024 23:17:23
+================================================================
+[23:17:47][Hulst_RP] created admins file
+[23:18:06][Hulst_RP] Changing global settings via setup stepper and started Deployer.
+[23:18:12][Hulst_RP] Setting recipe.
+[23:20:26][Hulst_RP] Running recipe.
+[23:21:42][Hulst_RP] Completed and committed server deploy.
